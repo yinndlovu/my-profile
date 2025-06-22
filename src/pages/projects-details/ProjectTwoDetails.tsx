@@ -23,7 +23,7 @@ const ProjectTwoDetails: React.FC<ProjectTwoDetailsProps> = ({ goBack }) => {
         <img src={ScreenshotFour} alt="Screenshot 4" />
       </div>
       <section className="project-two-section">
-        <h4>Idea creating the project</h4>
+        <h4>Idea behind creating the project</h4>
         <p
           dangerouslySetInnerHTML={{ __html: content.projectIdea }}
         ></p>
