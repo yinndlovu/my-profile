@@ -2,7 +2,6 @@ const content = {
     projectIdea: `Lecturers at school submit their weekly reports to supervisors using Forms. It involved too much manual work, 
           involved using multiple platforms just to fill in their weekly reports and submit them.
           <br></br>
-          <br></br>
           The Lecturers' Report System was designed to streamline the process of creating, managing, and submitting 
           reports for academic staff. The goal was to reduce paperwork, minimize errors, and provide a centralized 
           digital platform for all reporting needs.`,
