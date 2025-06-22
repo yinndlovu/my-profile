@@ -4,6 +4,7 @@ import ScreenshotOne from "../../assets/project-two/screenshot-1.png";
 import ScreenshotTwo from "../../assets/project-two/screenshot-2.png";
 import ScreenshotThree from "../../assets/project-two/screenshot-3.png";
 import ScreenshotFour from "../../assets/project-two/screenshot-4.png";
+import content from "../../data/projects/projectTwoContent";
 
 interface ProjectTwoDetailsProps {
   goBack: () => void;
@@ -23,15 +24,9 @@ const ProjectTwoDetails: React.FC<ProjectTwoDetailsProps> = ({ goBack }) => {
       </div>
       <section className="project-two-section">
         <h4>Idea creating the project</h4>
-        <p>
-          Lecturers at school submit their weekly reports to supervisors using Forms. It involved too much manual work, 
-          involved using multiple platforms just to fill in their weekly reports and submit them.
-          <br></br>
-          <br></br>
-          The Lecturers' Report System was designed to streamline the process of creating, managing, and submitting 
-          reports for academic staff. The goal was to reduce paperwork, minimize errors, and provide a centralized 
-          digital platform for all reporting needs.
-        </p>
+        <p
+          dangerouslySetInnerHTML={{ __html: content.projectIdea }}
+        ></p>
       </section>
       <section className="project-two-section">
         <h4>Key features</h4>
@@ -56,11 +51,9 @@ const ProjectTwoDetails: React.FC<ProjectTwoDetailsProps> = ({ goBack }) => {
       </section>
       <section className="project-two-section">
         <h4>My role in the project</h4>
-        <p>
-          I was a back-end developer for this project. Working alongside a team of skilled front-end and back-end developers.
-          I created multiple back-end methods to simplify processes, make the application fast, efficient, responsive, and
-          scabalable. It was a pretty exciting adventure for me, learning and familiarizing myself with C#, and I must say 
-          it's a pretty fun language to code in, and I am planning on using it for other projects next too.
+        <p
+          dangerouslySetInnerHTML={{ __html: content.myRole }}
+        >
         </p>
       </section>
       <button className="project-two-back-button" onClick={goBack}>Back to Projects</button>
