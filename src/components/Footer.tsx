@@ -24,7 +24,7 @@ const Footer = ({ onContactClick }: { onContactClick: () => void }) => {
                 <p>
                     Or&nbsp;
                     <span className="contact-link" onClick={onContactClick}>
-                        Contact Me
+                        Contact me
                     </span>
                     &nbsp;directly
                 </p>
