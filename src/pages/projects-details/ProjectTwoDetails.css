@@ -74,6 +74,41 @@
   color: rgb(212, 212, 212);
 }
 
+.tech-icons-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.tech-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.tech-icon-container.selected .tech-icon {
+  filter: drop-shadow(0 0 8px #57748b);
+}
+
+.tech-usage {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #949494;
+  text-align: center;
+}
+
+.tech-icons-prompt {
+  text-align: center;
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 480px) {
   .project-two-details .glow-text {
     font-size: 1.6rem;
