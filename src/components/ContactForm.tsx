@@ -73,7 +73,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
             <button type="submit" disabled={state.submitting}
               className="contact-form-submit-button"
             >
-              Send Message
+              Send message
             </button>
           </form>
         )}
