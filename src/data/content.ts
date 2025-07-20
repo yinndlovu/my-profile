@@ -16,10 +16,10 @@ know so far, my expertise and things I am currently focused on.`,
 and others I self-taught. As you can already guess, Java is my strong
 suit and also my favorite currently.`,
 
-  projectOneDescription: `A mobile application. I have learned a lot from this project. I build it using
-React Native and Expo. I won't say much details about it, but it's my favorite project so far.
+  projectOneDescription: `A mobile application built using React Native and Expo.
 <br></br>
-Its front end is open-source and can be found on my GitHub profile.`,
+I have learned a lot from this project, it is by far my favorite project I have worked on so far. 
+I won't say much details about it, but its front end is open-source and can be found on my GitHub profile.`,
 
   projectTwoDescription: `This is another very cool project I am currently working on with a team from my workplace.
 We are creating a Lecturers' Report System for my school, which is going to be used by lecturers to submit their reports
