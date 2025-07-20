@@ -18,7 +18,7 @@ const Projects: React.FC<ProjectsProps> = ({ goBack, goToProjectTwoDetails }) =>
       <h2 className="my-projects-title">Projects</h2>
       <div className="project-title-row">
         <p className="project-title">
-          1. Liverpool FC Mobile App
+          1. Pinky Promises
         </p>
         <button
           // onClick={goToProjectTwoDetails}
