@@ -17,8 +17,9 @@ and others I self-taught. As you can already guess, Java is my strong
 suit and also my favorite currently.`,
 
   projectOneDescription: `A mobile application. I have learned a lot from this project. I build it using
-React Native and Expo. More details coming soon. Its front end is open-source and the repository can be found
-on my GitHub profile.`,
+React Native and Expo. I won't say much details about it, but it's my favorite project so far.
+<br></br>
+Its front end is open-source and can be found on my GitHub profile.`,
 
   projectTwoDescription: `This is another very cool project I am currently working on with a team from my workplace.
 We are creating a Lecturers' Report System for my school, which is going to be used by lecturers to submit their reports
