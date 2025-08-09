@@ -13,7 +13,7 @@ This is my personal website (also still in the works) and below you can find the
 know so far, my expertise and things I am currently focused on.`,
 
   techStackExplanation: `Some of these, I learned at school, with Java being my main focus at school
-and others I self-taught. My strongest suits are all the back-end languages listed, pretty much.`,
+and others I self-taught. My strongest suits are all the back-end languages/frameworks listed, pretty much.`,
 
   projectOneDescription: `A mobile application built using React Native and Expo.
 <br></br>
