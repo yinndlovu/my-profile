@@ -54,7 +54,7 @@ const App = () => {
       <div className={`fade-page${pageVisible ? " visible" : ""}`}>
         {currentPage === "home" ? (
           <>
-            <h1 className="main-title">YINNNNNNNNNN!</h1>
+            <h1 className="main-title">HI!</h1>
             <h2 className="about-me-title">About Me</h2>
             <p
               className="intro-text"
