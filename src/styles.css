@@ -68,9 +68,7 @@ body {
 
 .glow-text {
   color: #fff;
-  text-shadow:
-    0 0 4px #7e91a5,
-    0 0 6px #7e91a5;
+  text-shadow: 0 0 4px #7e91a5, 0 0 6px #7e91a5;
   font-weight: bold;
 }
 
@@ -81,11 +79,12 @@ body {
 
   .glow-text {
     color: #fff;
-    text-shadow:
-      0 0 4px #7e91a5,
-      0 0 6px #7e91a5,
-      0 0 8px #7e91a5;
+    text-shadow: 0 0 4px #7e91a5, 0 0 6px #7e91a5, 0 0 8px #7e91a5;
     font-weight: bold;
+  }
+
+  .tech-stack-explanation {
+    font-size: 0.7rem;
   }
 
   .main-title {
@@ -113,11 +112,12 @@ body {
 
   .glow-text {
     color: #fff;
-    text-shadow:
-      0 0 4px #7e91a5,
-      0 0 6px #7e91a5,
-      0 0 8px #7e91a5;
+    text-shadow: 0 0 4px #7e91a5, 0 0 6px #7e91a5, 0 0 8px #7e91a5;
     font-weight: bold;
+  }
+
+  .tech-stack-explanation {
+    font-size: 0.6rem;
   }
 
   .main-title {
