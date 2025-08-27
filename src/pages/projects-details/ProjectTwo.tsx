@@ -1,57 +1,43 @@
 import React, { useState } from "react";
-import "./ProjectTwoDetails.css";
+import "./ProjectTwo.css";
 import ScreenshotOne from "../../assets/project-two/screenshot-1.png";
 import ScreenshotTwo from "../../assets/project-two/screenshot-2.png";
 import ScreenshotThree from "../../assets/project-two/screenshot-3.png";
 import ScreenshotFour from "../../assets/project-two/screenshot-4.png";
+import ScreenshotFive from "../../assets/project-two/screenshot-5.png";
+import ScreenshotSix from "../../assets/project-two/screenshot-6.png";
 import content from "../../data/projects/projectTwoContent";
 import ReactLogo from "../../assets/logos/react_logo.png";
-import NetCoreLogo from "../../assets/logos/netcore_logo.svg.png";
-import MsSqlLogo from "../../assets/logos/mssql_logo.svg";
-import AwsLogo from "../../assets/logos/Amazon_Web_Services_Logo.svg.png";
 
-interface ProjectTwoDetailsProps {
+interface ProjectTwoProps {
   goBack: () => void;
 }
 
 const techStack = [
   {
-    name: "React.js",
+    name: "React Native",
     icon: ReactLogo,
-    usage: "Frontend framework",
-  },
-  {
-    name: "C# (ASP.NET Core)",
-    icon: NetCoreLogo,
-    usage: "Backend API",
-  },
-  {
-    name: "Microsoft SQL Server DB",
-    icon: MsSqlLogo,
-    usage: "Database",
-  },
-  {
-    name: "AWS",
-    icon: AwsLogo,
-    usage: "Deployment",
+    usage: "React Native (front-end framework)",
   },
 ];
 
-const ProjectTwoDetails: React.FC<ProjectTwoDetailsProps> = ({ goBack }) => {
+const ProjectTwo: React.FC<ProjectTwoProps> = ({ goBack }) => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
     <div className="project-two-details">
-      <h2 className="glow-text">Lecturers Report System</h2>
+      <h2 className="glow-text">Pinky Promises</h2>
       <h3 className="subtitle">
-        A digital solution for creating and managing lecturer weekly reports
+        A cute couples app to keep memories, play games, and stay connected
       </h3>
-      <p>Some screenshots of the UI of this web application</p>
+      <p>Some screenshots of the UI of the Pinky Promises app</p>
       <div className="project-two-images">
         <img src={ScreenshotOne} alt="Screenshot 1" />
         <img src={ScreenshotTwo} alt="Screenshot 2" />
         <img src={ScreenshotThree} alt="Screenshot 3" />
         <img src={ScreenshotFour} alt="Screenshot 4" />
+        <img src={ScreenshotFive} alt="Screenshot 5" />
+        <img src={ScreenshotSix} alt="Screenshot 6" />
       </div>
       <section className="project-two-section">
         <h4>Idea behind creating the project</h4>
@@ -60,13 +46,13 @@ const ProjectTwoDetails: React.FC<ProjectTwoDetailsProps> = ({ goBack }) => {
       <section className="project-two-section">
         <h4>Key features</h4>
         <ul>
-          <li>Easy report creation and editing</li>
-          <li>Automated calculations and summaries</li>
-          <li>Secure login for lecturers and admins</li>
-          <li>Export reports as PDF</li>
-          <li>Responsive, ease-to-use design for every user</li>
-          <li>Import multiple users at once with supported files</li>
-          <li>Channel for seekly support and providing feedbacks</li>
+          <li>Do cute stuff with your partner</li>
+          <li>Share a space for milestones and memories</li>
+          <li>Stay connected with your partner's daily activities</li>
+          <li>Play couples' trivia and mini games together</li>
+          <li>Keep track of relationship timelines</li>
+          <li>Chat with an AI buddy who remembers your inside jokes</li>
+          <li>Use cool (optional) location features</li>
         </ul>
       </section>
       <section className="project-two-section">
@@ -109,4 +95,4 @@ const ProjectTwoDetails: React.FC<ProjectTwoDetailsProps> = ({ goBack }) => {
   );
 };
 
-export default ProjectTwoDetails;
+export default ProjectTwo;
