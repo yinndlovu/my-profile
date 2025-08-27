@@ -79,9 +79,15 @@ const Projects: React.FC<ProjectsProps> = ({
         className="project-desc"
         dangerouslySetInnerHTML={{ __html: content.projectTwoDescription }}
       ></p>
-      <div className="message">
-        <p>More of my projects that I happen to create will be added here.</p>
+
+      <div className="project-title-row">
+        <p className="project-title">3. Mini projects</p>
       </div>
+      <br></br>
+      <p className="project-desc">
+        I also have some smaller projects which can all be found on my GitHub.
+      </p>
+
       <button onClick={goBack} className="projects-back-button">
         Home
       </button>
