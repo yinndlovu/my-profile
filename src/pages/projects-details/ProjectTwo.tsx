@@ -85,7 +85,7 @@ const ProjectTwo: React.FC<ProjectTwoProps> = ({ goBack }) => {
         <div className="tech-icons-prompt">Click an icon</div>
       </section>
       <section className="project-two-section">
-        <h4>My role in the project</h4>
+        <h4>What I did</h4>
         <p dangerouslySetInnerHTML={{ __html: content.myRole }}></p>
       </section>
       <button className="project-two-back-button" onClick={goBack}>
