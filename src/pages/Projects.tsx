@@ -85,7 +85,15 @@ const Projects: React.FC<ProjectsProps> = ({
       </div>
       <br></br>
       <p className="project-desc">
-        I also have some smaller projects which can all be found on my GitHub.
+        I also have some smaller projects which can all be found on my {" "}
+        <a
+          href="https://github.com/yinndlovu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        .
       </p>
 
       <button onClick={goBack} className="projects-back-button">
