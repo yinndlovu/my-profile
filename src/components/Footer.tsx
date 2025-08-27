@@ -12,7 +12,7 @@ const Footer = ({ onContactClick }: { onContactClick: () => void }) => {
                         target="_blank" rel="noopener noreferrer">
                         <FaGithub className="social-icon" />
                     </a>
-                    <a href="https://discordapp.com/users/1296419884363943936/" 
+                    <a href="#" 
                         target="_blank" rel="noopener noreferrer">
                         <FaDiscord className="social-icon" />
                     </a>
