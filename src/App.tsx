@@ -8,7 +8,8 @@ import content from "./data/content";
 import Navbar from "./components/Navbar";
 import Resume from "./pages/Resume";
 import Education from "./pages/Education";
-import ProjectTwoDetails from "./pages/projects-details/ProjectTwoDetails";
+import ProjectOne from "./pages/projects-details/ProjectOne";
+import ProjectTwo from "./pages/projects-details/ProjectTwo";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -54,7 +55,7 @@ const App = () => {
       <div className={`fade-page${pageVisible ? " visible" : ""}`}>
         {currentPage === "home" ? (
           <>
-            <h1 className="main-title">HI!</h1>
+            <h1 className="main-title">Yinhla Ndlovu</h1>
             <h2 className="about-me-title">About Me</h2>
             <p
               className="intro-text"
@@ -81,16 +82,23 @@ const App = () => {
             </p>
           </>
         ) : currentPage === "projects" ? (
-          <Projects 
+          <Projects
             goBack={() => handleSetCurrentPage("home")}
-            goToProjectTwoDetails={() => handleSetCurrentPage("projectTwoDetails")}
+            goToProjectOneDetails={() =>
+              handleSetCurrentPage("projectOneDetails")
+            }
+            goToProjectTwoDetails={() =>
+              handleSetCurrentPage("projectTwoDetails")
+            }
           />
         ) : currentPage === "resume" ? (
           <Resume />
         ) : currentPage === "education" ? (
           <Education />
+        ) : currentPage === "projectOneDetails" ? (
+          <ProjectOne goBack={() => handleSetCurrentPage("projects")} />
         ) : currentPage === "projectTwoDetails" ? (
-          <ProjectTwoDetails goBack={() => handleSetCurrentPage("projects")} />
+          <ProjectTwo goBack={() => handleSetCurrentPage("projects")} />
         ) : null}
       </div>
       {showContactForm && <ContactForm onClose={toggleContactForm} />}
