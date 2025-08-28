@@ -4,7 +4,10 @@ graduating though, my school just needs me to complete an internship that runs
 for at least six month in order for me to be able to fulfill my graduation
 requirements.
 <br></br>
-I am highly experienced in back-end development, but I also do front-end development just as well.`,
+I am highly experienced in back-end development, super comfortable with front-end development, 
+and also very familiar with DevOps practices. This combination allows me to not only build and 
+design applications but also understand deployment pipelines, CI/CD, and overall 
+application lifecycle management.`,
 
   techStackExplanation: `I have worked with all these technologies`,
 
