@@ -51,7 +51,7 @@ body {
 }
 
 .app-container .tech-stack {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .tech-stack-explanation {
@@ -91,6 +91,10 @@ body {
     font-size: 0.7rem;
   }
 
+  .app-container .tech-stack {
+    margin-top: 30px;
+  }
+
   .main-title {
     font-size: 3rem;
     padding: 10px;
@@ -127,6 +131,10 @@ body {
   .main-title {
     font-size: 2rem;
     padding: 5px;
+  }
+
+  .app-container .tech-stack {
+    margin-top: 20px;
   }
 
   .about-me-title {
