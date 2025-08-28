@@ -50,6 +50,10 @@ body {
   padding-bottom: 40px;
 }
 
+.app-container .tech-stack {
+  margin-top: 50px;
+}
+
 .tech-stack-explanation {
   font-size: 0.9rem;
   max-width: 800px;
