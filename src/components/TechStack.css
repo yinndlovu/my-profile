@@ -32,7 +32,7 @@
 .language-tech-stack-slider {
   display: flex;
   gap: 60px;
-  animation: scroll 25s linear infinite;
+  animation: scroll 35s linear infinite;
   margin-top: 40px;
 }
 
@@ -86,7 +86,7 @@
 @media (max-width: 480px) {
   .tech-stack-slider,
   .language-tech-stack-slider {
-    animation-duration: 80s;
+    animation-duration: 100s;
     gap: 30px;
     margin-top: 15px;
   }
