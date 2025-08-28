@@ -2,7 +2,9 @@ const content = {
   aboutMeText: `Hi! I am Yin. I am currently a Computer Science final-year student. Close to
 graduating though, my school just needs me to complete an internship that runs
 for at least six month in order for me to be able to fulfill my graduation
-requirements.`,
+requirements.
+<br></br>
+I am highly experienced in back-end development, but I also do front-end development just as well.`,
 
   techStackExplanation: `I have worked with all these technologies`,
 

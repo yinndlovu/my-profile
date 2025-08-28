@@ -7,7 +7,7 @@ const content = {
           The goal was to create something playful, personal, and useful. 
           It's a fun companion app for couples who want to feel closer even when they're apart.`,
 
-  myRole: `This was a solo project I designed and developed.`,
+  myRole: `This was a solo project I designed, developed, and deployed.`,
 };
 
 export default content;

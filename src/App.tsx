@@ -71,13 +71,14 @@ const App = () => {
             ></p>
             <br></br>
             <p className="prompt">
+              See the {" "}
               <span
                 className="projects-link"
                 onClick={() => handleSetCurrentPage("projects")}
               >
-                Projects
+                projects
               </span>
-              &nbsp;that I have worked/am working on using some of these tools.
+              &nbsp;that I have worked on using some of these tools.
             </p>
           </>
         ) : currentPage === "projects" ? (

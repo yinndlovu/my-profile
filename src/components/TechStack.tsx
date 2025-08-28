@@ -16,41 +16,31 @@ import csharpLogo from "../assets/logos/csharp_logo.png";
 import netCoreLogo from "../assets/logos/netcore_logo.svg.png";
 
 const techStack = [
+  { name: "Node.js", logo: nodeLogo },
+  { name: "Spring Boot", logo: springLogo },
+  { name: "Git", logo: gitLogo },
+  { name: "React", logo: reactLogo },
+  { name: "HTML", logo: htmlLogo },
+  { name: "CSS", logo: cssLogo },
+  { name: ".NET Core", logo: netCoreLogo },
+];
+
+const languageTechStack = [
   { name: "Java", logo: javaLogo },
   { name: "Kotlin", logo: kotlinLogo },
   { name: "JavaScript", logo: jsLogo },
   { name: "TypeScript", logo: tsLogo },
-  { name: "Node.js", logo: nodeLogo },
-  { name: "HTML", logo: htmlLogo },
-  { name: "CSS", logo: cssLogo },
-  { name: "Spring Boot", logo: springLogo },
   { name: "SQL", logo: sqlLogo },
   { name: "MySQL", logo: mysqlLogo },
-  { name: "Git", logo: gitLogo },
-  { name: "React", logo: reactLogo },
   { name: "C#", logo: csharpLogo },
-  { name: ".NET Core", logo: netCoreLogo },
 ];
 
 const TechStack = () => {
-  const duplicatedTechStack = [
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-  ];
+  const duplicationFactor = 10;
+  const duplicatedTechStack = Array(duplicationFactor).fill(techStack).flat();
+  const duplicatedLanguageTechStack = Array(duplicationFactor)
+    .fill(languageTechStack)
+    .flat();
 
   return (
     <div>
@@ -58,6 +48,16 @@ const TechStack = () => {
       <div className="tech-stack">
         <div className="tech-stack-slider">
           {duplicatedTechStack.map((tech, index) => (
+            <img
+              key={index}
+              src={tech.logo}
+              alt={tech.name}
+              className="tech-logo"
+            />
+          ))}
+        </div>
+        <div className="language-tech-stack-slider">
+          {duplicatedLanguageTechStack.map((tech, index) => (
             <img
               key={index}
               src={tech.logo}
