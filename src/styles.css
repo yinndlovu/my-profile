@@ -4,6 +4,8 @@
   overflow-x: hidden;
   margin-top: 20px;
   margin-left: 250px;
+  position: relative;
+  z-index: 1;
 }
 
 .main-title {
@@ -74,6 +76,86 @@ body {
   color: #fff;
   text-shadow: 0 0 4px #7e91a5, 0 0 6px #7e91a5;
   font-weight: bold;
+}
+
+.star:nth-child(1) {
+  width: 2px;
+  height: 2px;
+  top: 20%;
+  left: 10%;
+  animation-duration: 15s;
+}
+
+.star:nth-child(2) {
+  width: 3px;
+  height: 3px;
+  top: 30%;
+  left: 50%;
+  animation-duration: 25s;
+}
+
+.star:nth-child(3) {
+  width: 1px;
+  height: 1px;
+  top: 70%;
+  left: 80%;
+  animation-duration: 10s;
+}
+
+.star:nth-child(4) {
+  width: 4px;
+  height: 4px;
+  top: 40%;
+  left: 20%;
+  animation-duration: 20s;
+}
+
+.star:nth-child(5) {
+  width: 2px;
+  height: 2px;
+  top: 60%;
+  left: 90%;
+  animation-duration: 30s;
+}
+
+.star:nth-child(6) {
+  width: 3px;
+  height: 3px;
+  top: 80%;
+  left: 60%;
+  animation-duration: 18s;
+}
+
+.star:nth-child(7) {
+  width: 1px;
+  height: 1px;
+  top: 10%;
+  left: 30%;
+  animation-duration: 22s;
+}
+
+.star:nth-child(8) {
+  width: 4px;
+  height: 4px;
+  top: 50%;
+  left: 40%;
+  animation-duration: 28s;
+}
+
+.star:nth-child(9) {
+  width: 2px;
+  height: 2px;
+  top: 90%;
+  left: 70%;
+  animation-duration: 12s;
+}
+
+.star:nth-child(10) {
+  width: 3px;
+  height: 3px;
+  top: 30%;
+  left: 80%;
+  animation-duration: 16s;
 }
 
 @media (max-width: 768px) {

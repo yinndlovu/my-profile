@@ -10,6 +10,7 @@ import Resume from "./pages/Resume";
 import Education from "./pages/Education";
 import ProjectOne from "./pages/projects-details/ProjectOne";
 import ProjectTwo from "./pages/projects-details/ProjectTwo";
+import GalaxyBackground from "./components/GalaxyBackground";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -51,6 +52,7 @@ const App = () => {
 
   return (
     <div className="app-container">
+      <GalaxyBackground />
       <Navbar setCurrentPage={handleSetCurrentPage} currentPage={currentPage} />
       <div className={`fade-page${pageVisible ? " visible" : ""}`}>
         {currentPage === "home" ? (
@@ -71,7 +73,7 @@ const App = () => {
             ></p>
             <br></br>
             <p className="prompt">
-              See the {" "}
+              See the{" "}
               <span
                 className="projects-link"
                 onClick={() => handleSetCurrentPage("projects")}
