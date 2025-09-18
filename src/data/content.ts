@@ -13,7 +13,14 @@ application lifecycle management.`,
 
   projectTwoDescription: `A mobile application built using React Native and Expo.
 
-I have learned a lot from this project, it is by far my favorite project I have worked on so far.`,
+I have learned a lot from this project, it is by far my favorite project I have worked on so far. Its front end is open source and can be found on my 
+<a
+            href="https://github.com/yinndlovu/pinky-promises"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>.`,
 
   projectOneDescription: `This is a very cool project I recently worked on with a team from my workplace.
 We created a Lecturers' Report System for my school, which is going to be used by lecturers to submit their reports
