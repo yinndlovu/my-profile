@@ -8,15 +8,6 @@ const Resume: React.FC = () => {
       <p>All of my experience so far</p>
       <ul>
         <li>
-          <strong className="glow-text">Red Enormity</strong>
-          <ul>
-            <li className="responsibility">
-              Owner (Dev and Creator)
-            </li>
-            <li className="period">May 2022 - Present</li>
-          </ul>
-        </li>
-        <li>
           <strong className="glow-text">Went Initiatives</strong>
           <ul>
             <li className="responsibility">Backend Developer Intern</li>
