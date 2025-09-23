@@ -43,29 +43,28 @@ const TechStack = () => {
     .flat();
 
   return (
-    <div>
-      <h2 className="tech-stack-title">MY TECH STACK</h2>
-      <div className="tech-stack">
-        <div className="tech-stack-slider">
-          {duplicatedTechStack.map((tech, index) => (
+    <div className="tech-stack">
+      <div className="tech-stack-slider">
+        {duplicatedTechStack.map((tech, index) => (
+          <div key={index} className="tech-item">
             <img
-              key={index}
               src={tech.logo}
               alt={tech.name}
               className="tech-logo"
             />
-          ))}
-        </div>
-        <div className="language-tech-stack-slider">
-          {duplicatedLanguageTechStack.map((tech, index) => (
+          </div>
+        ))}
+      </div>
+      <div className="language-tech-stack-slider">
+        {duplicatedLanguageTechStack.map((tech, index) => (
+          <div key={index} className="tech-item">
             <img
-              key={index}
               src={tech.logo}
               alt={tech.name}
               className="tech-logo"
             />
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

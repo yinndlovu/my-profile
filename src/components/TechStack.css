@@ -30,27 +30,46 @@
 
 .tech-stack-slider {
   display: flex;
-  gap: 60px;
+  gap: 20px;
   animation: scroll 35s linear infinite;
   margin-top: 10px;
 }
 
 .language-tech-stack-slider {
   display: flex;
-  gap: 60px;
+  gap: 20px;
   animation: scroll 35s linear infinite;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .language-tech-stack-slider {
   animation-direction: reverse;
 }
 
+.tech-item {
+  background: var(--tech-card-bg);
+  border: 1px solid var(--nav-border);
+  border-radius: 12px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tech-item:hover {
+  background: var(--tech-card-bg-hover);
+  border-color: var(--nav-border-hover);
+  transform: translateY(-2px);
+}
+
 .tech-logo {
   width: auto;
-  height: 75px;
+  height: 40px;
   object-fit: contain;
-  flex-shrink: 0;
 }
 
 @keyframes scroll {
@@ -66,65 +85,39 @@
   .tech-stack-slider,
   .language-tech-stack-slider {
     animation-duration: 1000s;
-    gap: 45px;
+    gap: 15px;
     margin-top: 20px;
   }
 
-  .tech-logo {
-    width: auto;
+  .tech-item {
+    min-width: 50px;
     height: 50px;
   }
 
-  .tech-stack-title {
-    font-size: 1.4rem;
-  }
-
-  .tech-stack {
-    padding-bottom: 15px;
-  }
-
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+  .tech-logo {
+    height: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .tech-stack-slider {
     animation-duration: 100s;
-    gap: 30px;
+    gap: 10px;
     margin-top: 10px;
   }
 
   .language-tech-stack-slider {
     animation-duration: 100s;
-    gap: 30px;
+    gap: 10px;
     margin-top: 20px;
   }
 
+  .tech-item {
+    min-width: 45px;
+    height: 45px;
+  }
+
   .tech-logo {
-    width: auto;
-    height: 50px;
-  }
-
-  .tech-stack-title {
-    font-size: 1.2rem;
-  }
-
-  .tech-stack {
-    padding-bottom: 10px;
-  }
-
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-1000%);
-    }
+    height: 25px;
   }
 }

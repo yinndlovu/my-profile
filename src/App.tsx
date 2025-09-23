@@ -80,15 +80,12 @@ const App = () => {
                 );
               })()}
 
-              <div className="tech-stack">
-                <TechStack />
+              <div className="tech-stack-card">
+                <div className="tech-stack">
+                  <TechStack />
+                </div>
               </div>
-              <p
-                className="tech-stack-explanation"
-                dangerouslySetInnerHTML={{
-                  __html: content.techStackExplanation,
-                }}
-              ></p>
+              
               <br></br>
               <p className="prompt">
                 See the{" "}

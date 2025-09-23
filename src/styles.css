@@ -35,6 +35,9 @@
 
   --nav-surface-opaque: #0b0f14;
   --nav-surface-border: rgba(80, 99, 128, 0.35);
+
+  --tech-card-bg: #171b1f;
+  --tech-card-bg-hover: #111316;
 }
 
 :root[data-theme="light"] {
@@ -54,6 +57,9 @@
 
   --nav-surface-opaque: #ffffff;
   --nav-surface-border: rgba(10, 20, 30, 0.15);
+
+  --tech-card-bg: #f8f9fa;
+  --tech-card-bg-hover: #e9ecef;
 }
 
 body {
@@ -123,8 +129,32 @@ body {
   color: rgb(184, 189, 189);
 }
 
+:root[data-theme="light"] .about-card p {
+  color: #2a2f36;
+}
+
 .about-col {
   padding: 12px;
+}
+
+.app-container .tech-stack {
+  margin-top: 20px;
+}
+
+.tech-stack-card {
+  background: var(--nav-surface-opaque);
+  border: 1px solid var(--nav-surface-border);
+  border-radius: 24px;
+  padding: 20px;
+  margin: 120px auto 24px;
+  max-width: 75%;
+  text-align: center;
+}
+
+.tech-stack .tech-item img {
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
 }
 
 .intro-text {
@@ -151,17 +181,6 @@ body {
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 40px;
-}
-
-.app-container .tech-stack {
-  margin-top: 40px;
-}
-
-.tech-stack-explanation {
-  font-size: 0.9rem;
-  max-width: 800px;
-  margin: 0 auto;
-  color: rgb(218, 218, 218);
 }
 
 .fade-page {
