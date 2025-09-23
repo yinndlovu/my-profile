@@ -4,7 +4,7 @@ import "./Resume.css";
 const Resume: React.FC = () => {
   return (
     <div className="resume">
-      <h2>Resume</h2>
+      <h2>Experience</h2>
 
       <div className="experience-item">
         <div className="experience-header">
