@@ -82,44 +82,6 @@
   object-fit: contain;
 }
 
-.tech-tooltip {
-  position: fixed;
-  top: auto;
-  left: 50%;
-  transform: translateX(-50%) translateY(-8px);
-  background: var(--nav-surface-opaque);
-  border: 1px solid var(--nav-surface-border);
-  border-radius: 8px;
-  padding: 8px 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease;
-  z-index: 10000;
-  pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.tech-item:hover .tech-tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
-.tech-tooltip-title {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text);
-  margin-bottom: 4px;
-}
-
-.tech-tooltip-description {
-  font-size: 0.8rem;
-  color: var(--muted);
-  line-height: 1.3;
-  white-space: normal;
-  max-width: 200px;
-}
-
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -176,5 +138,14 @@
   .tech-tooltip {
     max-width: 120px;
     font-size: 0.75rem;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1000%);
+    }
   }
 }

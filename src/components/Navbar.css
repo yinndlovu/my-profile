@@ -32,7 +32,7 @@
 
 .navbar-inline.scrolled {
   left: 50%;
-  top: 12px;
+  top: 14px;
   transform: translateX(-50%);
 }
 .navbar-inline.scrolled .nav-logo {
@@ -60,9 +60,10 @@
   color: var(--text);
   border: 1px solid var(--nav-border);
   padding: 6px 10px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 14px;
-  line-height: 1;
+  font-weight: bold;
+  line-height: 1.1;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.05s ease;
 }
