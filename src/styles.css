@@ -1,6 +1,5 @@
 .app-container {
   text-align: center;
-  padding-bottom: 20px;
   overflow-x: hidden;
   margin-top: 20px;
   position: relative;
@@ -11,7 +10,11 @@
   padding-left: var(--content-pad, 16px);
   padding-right: var(--content-pad, 16px);
   padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
+
 :root {
   --content-max: 1100px;
   --content-pad: 16px;
@@ -50,6 +53,8 @@
 body {
   background-color: var(--bg);
   color: var(--text);
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .tech-stack-explanation {
@@ -109,6 +114,7 @@ body {
 .fade-page {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  flex: 1
 }
 
 .fade-page.visible {

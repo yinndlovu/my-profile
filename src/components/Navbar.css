@@ -1,16 +1,16 @@
-/* Backdrop bar that appears when scrolled */
 .nav-backdrop {
   position: fixed;
-  inset: 0 0 auto 0; /* top full-width */
-  height: 56px; /* fully cover the top area */
+  inset: 0 0 auto 0;
+  height: 56px;
   background: var(--nav-surface-opaque);
   border-bottom: 1px solid var(--nav-surface-border);
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
   transition: opacity 200ms ease, transform 200ms ease;
-  z-index: 900; /* below buttons */
+  z-index: 900;
 }
+
 .nav-backdrop.show {
   opacity: 1;
   transform: translateY(0);
@@ -19,7 +19,10 @@
 .navbar-inline {
   position: fixed;
   top: 12px;
-  left: max(var(--content-pad, 16px), calc((100vw - var(--content-max, 1100px)) / 2 + var(--content-pad, 16px)));
+  left: max(
+    var(--content-pad, 16px),
+    calc((100vw - var(--content-max, 1100px)) / 2 + var(--content-pad, 16px))
+  );
   display: flex;
   align-items: center;
   gap: 8px;
@@ -27,13 +30,11 @@
   transition: left 250ms ease, transform 250ms ease;
 }
 
-/* Center the navbar when scrolled */
 .navbar-inline.scrolled {
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* Hide logo when scrolled */
 .navbar-inline.scrolled .nav-logo {
   display: none;
 }
@@ -79,11 +80,14 @@
   border-color: var(--nav-border-active);
 }
 
-/* Theme toggle aligned with content right margin */
 .theme-toggle {
   position: fixed;
   top: 12px;
-  right: max(var(--content-pad, 16px), calc((100vw - var(--content-max, 1100px)) / 2 + var(--content-pad, 16px)));
+  right: max(
+    var(--content-pad, 16px),
+    calc((100vw - var(--content-max, 1100px)) / 2 + var(--content-pad, 16px))
+  );
+  left: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -95,10 +99,10 @@
   color: var(--text);
   cursor: pointer;
   z-index: 1000;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.05s ease, opacity 200ms ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.05s ease,
+    opacity 200ms ease;
 }
 
-/* Hide toggle when scrolled */
 .theme-toggle.hidden {
   opacity: 0;
   pointer-events: none;

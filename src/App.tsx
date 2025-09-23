@@ -51,61 +51,68 @@ const App = () => {
   }, [pageVisible, pendingPage]);
 
   return (
-    <div className="app-container">
-      <GalaxyBackground />
-      <Navbar setCurrentPage={handleSetCurrentPage} currentPage={currentPage} />
-      <div className={`fade-page${pageVisible ? " visible" : ""}`}>
-        {currentPage === "home" ? (
-          <>
-            <h1 className="main-title">Yinhla Ndlovu</h1>
-            <h2 className="about-me-title">About Me</h2>
-            <p
-              className="intro-text"
-              dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
-            ></p>
+    <>
+      <div className="app-container">
+        <GalaxyBackground />
+        <Navbar
+          setCurrentPage={handleSetCurrentPage}
+          currentPage={currentPage}
+        />
+        <div className={`fade-page${pageVisible ? " visible" : ""}`}>
+          {currentPage === "home" ? (
+            <>
+              <h1 className="main-title">Yinhla Ndlovu</h1>
+              <h2 className="about-me-title">About Me</h2>
+              <p
+                className="intro-text"
+                dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
+              ></p>
 
-            <div className="tech-stack">
-              <TechStack />
-            </div>
-            <p
-              className="tech-stack-explanation"
-              dangerouslySetInnerHTML={{ __html: content.techStackExplanation }}
-            ></p>
-            <br></br>
-            <p className="prompt">
-              See the{" "}
-              <span
-                className="projects-link"
-                onClick={() => handleSetCurrentPage("projects")}
-              >
-                projects
-              </span>
-              &nbsp;that I have worked on using some of these tools.
-            </p>
-          </>
-        ) : currentPage === "projects" ? (
-          <Projects
-            goBack={() => handleSetCurrentPage("home")}
-            goToProjectOneDetails={() =>
-              handleSetCurrentPage("projectOneDetails")
-            }
-            goToProjectTwoDetails={() =>
-              handleSetCurrentPage("projectTwoDetails")
-            }
-          />
-        ) : currentPage === "resume" ? (
-          <Resume />
-        ) : currentPage === "education" ? (
-          <Education />
-        ) : currentPage === "projectOneDetails" ? (
-          <ProjectOne goBack={() => handleSetCurrentPage("projects")} />
-        ) : currentPage === "projectTwoDetails" ? (
-          <ProjectTwo goBack={() => handleSetCurrentPage("projects")} />
-        ) : null}
+              <div className="tech-stack">
+                <TechStack />
+              </div>
+              <p
+                className="tech-stack-explanation"
+                dangerouslySetInnerHTML={{
+                  __html: content.techStackExplanation,
+                }}
+              ></p>
+              <br></br>
+              <p className="prompt">
+                See the{" "}
+                <span
+                  className="projects-link"
+                  onClick={() => handleSetCurrentPage("projects")}
+                >
+                  projects
+                </span>
+                &nbsp;that I have worked on using some of these tools.
+              </p>
+            </>
+          ) : currentPage === "projects" ? (
+            <Projects
+              goBack={() => handleSetCurrentPage("home")}
+              goToProjectOneDetails={() =>
+                handleSetCurrentPage("projectOneDetails")
+              }
+              goToProjectTwoDetails={() =>
+                handleSetCurrentPage("projectTwoDetails")
+              }
+            />
+          ) : currentPage === "resume" ? (
+            <Resume />
+          ) : currentPage === "education" ? (
+            <Education />
+          ) : currentPage === "projectOneDetails" ? (
+            <ProjectOne goBack={() => handleSetCurrentPage("projects")} />
+          ) : currentPage === "projectTwoDetails" ? (
+            <ProjectTwo goBack={() => handleSetCurrentPage("projects")} />
+          ) : null}
+        </div>
+        {showContactForm && <ContactForm onClose={toggleContactForm} />}
       </div>
-      {showContactForm && <ContactForm onClose={toggleContactForm} />}
       <Footer onContactClick={toggleContactForm} />
-    </div>
+    </>
   );
 };
 
