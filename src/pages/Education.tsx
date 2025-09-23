@@ -5,23 +5,24 @@ const Education: React.FC = () => {
   return (
     <div className="education">
       <h2>Education</h2>
-      <p>My educational background so far</p>
-      <ul>
-        <li>
-          <strong className="glow-text">University of Venda</strong>
-          <ul>
-            <li className="course">Mining and Environmental Geology</li>
-            <li className="period">2020 - 2020</li>
-          </ul>
-        </li>
-        <li>
-          <strong className="glow-text">Tshwane University of Technology</strong>
-          <ul>
-            <li className="course">Computer Science</li>
-            <li className="period">2021 - 2025</li>
-          </ul>
-        </li>
-      </ul>
+
+      <div className="education-item">
+        <div className="education-header">
+          <h3 className="institution glow-text">University of Venda</h3>
+          <span className="period">2020 - 2020</span>
+        </div>
+        <div className="course">Mining and Environmental Geology</div>
+      </div>
+
+      <div className="education-item">
+        <div className="education-header">
+          <h3 className="institution glow-text">
+            Tshwane University of Technology
+          </h3>
+          <span className="period">2021 - 2025</span>
+        </div>
+        <div className="course">Computer Science</div>
+      </div>
     </div>
   );
 };

@@ -1,31 +1,48 @@
+.education {
+  max-width: 94%;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
 .education h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 15px 0;
-  padding-top: 30px;
+  letter-spacing: 1.3px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  text-align: left;
 }
 
-.education ul {
-  list-style-type: none;
-  padding: 8px;
+.education-item {
+  margin-bottom: 36px;
+  text-align: left;
 }
 
-li {
-  font-size: 18px;
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
-li .course {
-  font-size: 16px;
+.institution {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
 }
 
-li .period {
-  font-size: 14px;
-  padding-top: 4px;
-  font-style: oblique;
-  padding-bottom: 12px;
+.course {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 8px;
 }
 
-li .wrapper {
-  padding-top: 20px;
+.period {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -34,16 +51,18 @@ li .wrapper {
     padding-top: 20px;
   }
 
-  li {
-    font-size: 16px;
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 
-  li .course {
-    font-size: 14px;
+  .institution {
+    font-size: 1.2rem;
   }
 
-  li .period {
-    font-size: 12px;
+  .course {
+    font-size: 1rem;
   }
 }
 
@@ -53,15 +72,15 @@ li .wrapper {
     padding-top: 15px;
   }
 
-  li {
-    font-size: 16px;
+  .institution {
+    font-size: 1.1rem;
   }
 
-  li .course {
-    font-size: 14px;
+  .course {
+    font-size: 0.95rem;
   }
 
-  li .period {
-    font-size: 12px;
+  .period {
+    font-size: 0.8rem;
   }
 }
