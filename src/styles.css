@@ -19,7 +19,7 @@
   --content-max: 1100px;
   --content-pad: 16px;
 
-  --bg: #191b1f;
+  --bg: #15161a;
   --bg-brass1: rgba(187, 147, 52, 0.3);
   --bg-brass2: rgba(187, 147, 52, 0.1);
 
@@ -88,14 +88,43 @@ body {
 .main-title {
   font-size: 4rem;
   margin: 20px 0;
-  padding: 50px;
+  padding-top: 90px;
   white-space: normal;
 }
 
-.about-me-title {
-  font-size: 3rem;
-  margin: 15px 0;
-  padding-bottom: 20px;
+.subtitle {
+  margin: -10px 0 8px 0;
+  font-size: 1.15rem;
+  letter-spacing: 0.3px;
+  color: rgba(232, 240, 255, 0.85);
+}
+
+:root[data-theme="light"] .subtitle {
+  color: #2a2f36;
+}
+
+.about-card {
+  background: var(--nav-surface-opaque);
+  border: 1px solid var(--nav-surface-border);
+  border-radius: 24px;
+  padding: 30px;
+  margin: 140px auto 24px;
+  max-width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  text-align: left;
+}
+
+.about-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgb(184, 189, 189);
+}
+
+.about-col {
+  padding: 12px;
 }
 
 .intro-text {
@@ -175,6 +204,10 @@ body {
     padding: 10px;
   }
 
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+
   .about-me-title {
     font-size: 2rem;
   }
@@ -206,6 +239,10 @@ body {
   .main-title {
     font-size: 2rem;
     padding: 5px;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
   }
 
   .app-container .tech-stack {

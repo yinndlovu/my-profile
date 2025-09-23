@@ -60,11 +60,25 @@ const App = () => {
           {currentPage === "home" ? (
             <>
               <h1 className="main-title">Yinhla Ndlovu</h1>
-              <h2 className="about-me-title">About Me</h2>
-              <p
-                className="intro-text"
-                dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
-              ></p>
+              <p className="subtitle">
+                Software Engineer | Full‑stack Developer
+              </p>
+
+              {(() => {
+                const parts = content.aboutMeText.split("<br></br>");
+                const para1 = (parts[0] || "").trim();
+                const para2 = (parts[1] || "").trim();
+                return (
+                  <div className="about-card">
+                    <div className="about-col">
+                      <p dangerouslySetInnerHTML={{ __html: para1 }}></p>
+                    </div>
+                    <div className="about-col">
+                      <p dangerouslySetInnerHTML={{ __html: para2 }}></p>
+                    </div>
+                  </div>
+                );
+              })()}
 
               <div className="tech-stack">
                 <TechStack />
