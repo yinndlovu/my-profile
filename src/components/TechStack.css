@@ -35,6 +35,10 @@
   margin-top: 10px;
 }
 
+.tech-stack-slider:hover {
+  animation-play-state: paused;
+}
+
 .language-tech-stack-slider {
   display: flex;
   gap: 20px;
@@ -46,10 +50,14 @@
   animation-direction: reverse;
 }
 
+.language-tech-stack-slider:hover {
+  animation-play-state: paused;
+}
+
 .tech-item {
   background: var(--tech-card-bg);
   border: 1px solid var(--nav-border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 8px;
   display: inline-flex;
   align-items: center;
@@ -58,6 +66,8 @@
   height: 60px;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
 }
 
 .tech-item:hover {
@@ -70,6 +80,44 @@
   width: auto;
   height: 40px;
   object-fit: contain;
+}
+
+.tech-tooltip {
+  position: fixed;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: var(--nav-surface-opaque);
+  border: 1px solid var(--nav-surface-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 10000;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tech-item:hover .tech-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tech-tooltip-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.tech-tooltip-description {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  white-space: normal;
+  max-width: 200px;
 }
 
 @keyframes scroll {
@@ -97,6 +145,10 @@
   .tech-logo {
     height: 30px;
   }
+
+  .tech-tooltip {
+    max-width: 150px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -119,5 +171,10 @@
 
   .tech-logo {
     height: 25px;
+  }
+
+  .tech-tooltip {
+    max-width: 120px;
+    font-size: 0.75rem;
   }
 }

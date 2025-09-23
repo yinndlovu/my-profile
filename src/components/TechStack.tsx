@@ -42,27 +42,56 @@ const TechStack = () => {
     .fill(languageTechStack)
     .flat();
 
+  const techDescriptions = {
+    "Node.js": "JavaScript runtime for building scalable server-side applications",
+    "Spring Boot": "Java framework for creating microservices and web applications",
+    "Git": "Version control system for tracking code changes and collaboration",
+    "React": "JavaScript library for building interactive user interfaces",
+    "HTML": "Markup language for structuring web content",
+    "CSS": "Styling language for designing and formatting web pages",
+    ".NET Core": "Cross-platform framework for building modern applications",
+    "Java": "Object-oriented programming language for enterprise applications",
+    "Kotlin": "Modern programming language for Android and server-side development",
+    "JavaScript": "Dynamic programming language for web development",
+    "TypeScript": "Typed superset of JavaScript for large-scale applications",
+    "SQL": "Structured Query Language for database management",
+    "MySQL": "Popular open-source relational database management system",
+    "C#": "Modern programming language for .NET applications"
+  };
+
   return (
     <div className="tech-stack">
       <div className="tech-stack-slider">
         {duplicatedTechStack.map((tech, index) => (
-          <div key={index} className="tech-item">
+          <div key={index} className="tech-item" data-tech={tech.name}>
             <img
               src={tech.logo}
               alt={tech.name}
               className="tech-logo"
             />
+            <div className="tech-tooltip">
+              <div className="tech-tooltip-title">{tech.name}</div>
+              <div className="tech-tooltip-description">
+                {techDescriptions[tech.name as keyof typeof techDescriptions]}
+              </div>
+            </div>
           </div>
         ))}
       </div>
       <div className="language-tech-stack-slider">
         {duplicatedLanguageTechStack.map((tech, index) => (
-          <div key={index} className="tech-item">
+          <div key={index} className="tech-item" data-tech={tech.name}>
             <img
               src={tech.logo}
               alt={tech.name}
               className="tech-logo"
             />
+            <div className="tech-tooltip">
+              <div className="tech-tooltip-title">{tech.name}</div>
+              <div className="tech-tooltip-description">
+                {techDescriptions[tech.name as keyof typeof techDescriptions]}
+              </div>
+            </div>
           </div>
         ))}
       </div>
