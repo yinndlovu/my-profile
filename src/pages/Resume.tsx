@@ -5,23 +5,32 @@ const Resume: React.FC = () => {
   return (
     <div className="resume">
       <h2>Resume</h2>
-      <p>All of my experience so far</p>
-      <ul>
-        <li>
-          <strong className="glow-text">Went Initiatives</strong>
-          <ul>
-            <li className="responsibility">Backend Developer Intern</li>
-            <li className="period">June 2023 - April 2024</li>
-          </ul>
-        </li>
-        <li>
-          <strong className="glow-text">ICEP</strong>
-          <ul>
-            <li className="responsibility">Software Developer Intern</li>
-            <li className="period">March 2025 - Present</li>
-          </ul>
-        </li>
-      </ul>
+
+      <div className="experience-item">
+        <div className="experience-header">
+          <h3 className="company-name glow-text">Went Initiatives</h3>
+          <span className="duration">June 2023 - April 2024</span>
+        </div>
+        <div className="job-title">Backend Developer Intern</div>
+        <div className="job-description">
+          Developed automation services for Meta platforms to auto-publish posts
+          from REST APIs, and created custom Discord bots for gaming, server
+          management, and moderation using Java.
+        </div>
+      </div>
+
+      <div className="experience-item">
+        <div className="experience-header">
+          <h3 className="company-name glow-text">ICEP</h3>
+          <span className="duration">March 2025 - Present</span>
+        </div>
+        <div className="job-title">Software Developer Intern</div>
+        <div className="job-description">
+          Took on multiple roles including Full-stack/Back-end Dev, DevOps Engineer on
+          multiple projects we worked on to build systems such as a reporting
+          system for lecturers using tools like .NET, React, EF, and Node.js.
+        </div>
+      </div>
     </div>
   );
 };
