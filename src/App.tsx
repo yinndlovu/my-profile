@@ -13,12 +13,8 @@ import ProjectTwo from "./pages/projects-details/ProjectTwo";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
-  const [showContactForm, setShowContactForm] = useState(false);
   const [pageVisible, setPageVisible] = useState(true);
   const [pendingPage, setPendingPage] = useState<string | null>(null);
-  const toggleContactForm = () => {
-    setShowContactForm(!showContactForm);
-  };
 
   useEffect(() => {
     if (currentPage === "home") {
@@ -101,6 +97,9 @@ const App = () => {
                 </span>
                 &nbsp;that I have worked on using some of these tools.
               </p>
+              <div id="contact-section">
+                <ContactForm inline />
+              </div>
             </>
           ) : currentPage === "projects" ? (
             <Projects
@@ -122,9 +121,23 @@ const App = () => {
             <ProjectTwo goBack={() => handleSetCurrentPage("projects")} />
           ) : null}
         </div>
-        {showContactForm && <ContactForm onClose={toggleContactForm} />}
       </div>
-      <Footer onContactClick={toggleContactForm} />
+      <Footer
+        onContactClick={() => {
+          if (currentPage !== "home") {
+            handleSetCurrentPage("home");
+            setTimeout(() => {
+              document
+                .getElementById("contact-section")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }, 350);
+          } else {
+            document
+              .getElementById("contact-section")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+      />
     </>
   );
 };

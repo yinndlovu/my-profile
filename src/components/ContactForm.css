@@ -20,9 +20,10 @@
 }
 
 .popup {
-  background-color: darkslategray;
+  background-color: var(--nav-surface-opaque);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--nav-surface-border);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 350px;
   transform: scale(0.9);
@@ -50,8 +51,26 @@
   padding: 8px;
   margin-bottom: 10px;
   margin-top: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid (--nav-surface-border);
+  background-color: var(--tech-card-bg);
   border-radius: 4px;
+  color: var(--text);
+}
+
+.popup textarea {
+  height: 70px;
+}
+
+.popup input::placeholder,
+.popup textarea::placeholder {
+  color: var(--really-muted);
+}
+
+.popup input:focus,
+.popup textarea:focus {
+  outline: none;
+  border-color: var(--nav-border-active);
+  background-color: var(--tech-card-bg-hover);
 }
 
 .popup textarea {
@@ -62,16 +81,16 @@
   border-radius: 10px;
   padding: 10px;
   font-weight: bold;
-  color: white;
-  background-color: darkseagreen;
+  color: #c7d5eb;
+  background-color: var(--nav-border);
   cursor: pointer;
   transition: background 0.2s;
   border: none;
 }
 
 .contact-form-submit-button:hover {
-  background-color: rgb(100, 129, 100);
-  color: rgb(212, 212, 212);
+  background-color: #374253;
+  color: #d5e3fa;
 }
 
 .contact-form-x-button {
@@ -113,4 +132,52 @@
 
 .contact-form-close-button {
   display: none;
+}
+
+.contact-inline {
+  max-width: 94%;
+  margin: 80px auto 150px;
+  padding: 20px;
+  text-align: left;
+  background: var(--nav-surface-opaque);
+  border: 1px solid var(--nav-surface-border);
+  border-radius: 24px;
+}
+
+.contact-inline h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.contact-inline-form label {
+  display: block;
+  margin: 10px 0px 5px;
+}
+
+.contact-inline-form input,
+.contact-inline-form textarea {
+  width: 95%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--nav-surface-border);
+  border-radius: 10px;
+  background-color: var(--tech-card-bg);
+  color: var(--text);
+}
+
+.contact-inline-form input::placeholder,
+.contact-inline-form textarea::placeholder {
+  color: var(--really-muted);
+}
+
+.contact-inline-form input:focus,
+.contact-inline-form textarea:focus {
+  outline: none;
+  border-color: var(--nav-border-active);
+  background-color: var(--tech-card-bg-hover);
+}
+
+.contact-inline-form textarea {
+  height: 100px;
 }
