@@ -113,6 +113,10 @@ body {
   color: #2a2f36;
 }
 
+:root[data-theme="light"] .nav-btn:hover {
+  color: #2f3847;
+}
+
 :root[data-theme="light"] .contact-form-submit-button {
   color: #2a2f36;
 }

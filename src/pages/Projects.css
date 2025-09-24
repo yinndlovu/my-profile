@@ -104,11 +104,6 @@
   color: rgb(214, 214, 214);
 }
 
-.projects-back-button:hover {
-  background-color: rgb(100, 129, 100);
-  color: rgb(212, 212, 212);
-}
-
 a {
   color: darkseagreen;
   text-decoration: none;

@@ -71,6 +71,7 @@
 .nav-btn:hover {
   background: var(--nav-bg-hover);
   border-color: var(--nav-border-hover);
+  color: rgb(219, 231, 231);
 }
 
 .nav-btn:active {

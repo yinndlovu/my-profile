@@ -10,10 +10,6 @@ import NetCoreLogo from "../../assets/logos/netcore_logo.svg.png";
 import MsSqlLogo from "../../assets/logos/mssql_logo.svg";
 import AwsLogo from "../../assets/logos/Amazon_Web_Services_Logo.svg.png";
 
-interface ProjectOneProps {
-  goBack: () => void;
-}
-
 const techStack = [
   {
     name: "React.js",
@@ -37,7 +33,7 @@ const techStack = [
   },
 ];
 
-const ProjectOne: React.FC<ProjectOneProps> = () => {
+const ProjectOne: React.FC = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (

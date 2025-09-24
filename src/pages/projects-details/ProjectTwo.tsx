@@ -9,10 +9,6 @@ import ScreenshotSix from "../../assets/project-two/screenshot-6.png";
 import content from "../../data/projects/projectTwoContent";
 import ReactLogo from "../../assets/logos/react_logo.png";
 
-interface ProjectTwoProps {
-  goBack: () => void;
-}
-
 const techStack = [
   {
     name: "React Native",
@@ -21,7 +17,7 @@ const techStack = [
   },
 ];
 
-const ProjectTwo: React.FC<ProjectTwoProps> = () => {
+const ProjectTwo: React.FC = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (

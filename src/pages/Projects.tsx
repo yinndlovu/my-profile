@@ -1,17 +1,9 @@
 import React, { useEffect } from "react";
 import "./Projects.css";
 import content from "../data/content";
+import { Link } from "react-router-dom";
 
-interface ProjectsProps {
-  goBack: () => void;
-  goToProjectOneDetails: () => void;
-  goToProjectTwoDetails: () => void;
-}
-
-const Projects: React.FC<ProjectsProps> = ({
-  goToProjectOneDetails,
-  goToProjectTwoDetails,
-}) => {
+const Projects: React.FC = () => {
   useEffect(() => {
     document.title = "Projects | Yin";
   }, []);
@@ -22,14 +14,14 @@ const Projects: React.FC<ProjectsProps> = ({
       title: "Lecturers Report System",
       descriptionHtml: content.projectOneDescription,
       githubUrl: null as string | null,
-      onDetails: goToProjectOneDetails,
+      detailsPath: "/projects/lecturers-report-system",
     },
     {
       id: 2,
       title: "Pinky Promises",
       descriptionHtml: content.projectTwoDescription,
       githubUrl: "https://github.com/yinndlovu/pinky-promises",
-      onDetails: goToProjectTwoDetails,
+      detailsPath: "/projects/pinky-promises",
     },
   ];
 
@@ -74,13 +66,13 @@ const Projects: React.FC<ProjectsProps> = ({
               </div>
 
               <div className="project-actions-bottom">
-                <button
-                  onClick={p.onDetails}
+                <Link
+                  to={p.detailsPath}
                   className="btn btn-details"
                   title="View project details"
                 >
                   Details
-                </button>
+                </Link>
               </div>
             </div>
           </div>

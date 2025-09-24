@@ -1,18 +1,14 @@
 import "./Navbar.css";
 import siteLogo from "../assets/logos/site_logo.png";
 import { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
-interface NavbarProps {
-  setCurrentPage: (page: string) => void;
-  currentPage: string;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) => {
+const Navbar: React.FC = () => {
   const items = [
-    { id: "home", label: "Home" },
-    { id: "projects", label: "Portfolio" },
-    { id: "resume", label: "Experience" },
-    { id: "education", label: "Education" },
+    { to: "/home", label: "Home" },
+    { to: "/projects", label: "Portfolio" },
+    { to: "/resume", label: "Experience" },
+    { to: "/education", label: "Education" },
   ];
 
   const getInitialTheme = () => {
@@ -48,16 +44,20 @@ const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) => {
       <div className={`nav-backdrop${scrolled ? " show" : ""}`} />
 
       <nav className={`navbar-inline${scrolled ? " scrolled" : ""}`}>
-        <img src={siteLogo} alt="Site logo" className="nav-logo" />
+        <Link to="/home">
+          <img src={siteLogo} alt="Site logo" className="nav-logo" />
+        </Link>
         <ul className="nav-buttons">
           {items.map((it) => (
-            <li key={it.id}>
-              <button
-                className={`nav-btn${currentPage === it.id ? " active" : ""}`}
-                onClick={() => setCurrentPage(it.id)}
+            <li key={it.to}>
+              <NavLink
+                to={it.to}
+                className={({ isActive }) =>
+                  `nav-btn${isActive ? " active" : ""}`
+                }
               >
                 {it.label}
-              </button>
+              </NavLink>
             </li>
           ))}
         </ul>
