@@ -1,0 +1,117 @@
+.gh-card {
+  background: var(--nav-surface-opaque);
+  border: 1px solid var(--nav-surface-border);
+  border-radius: 24px;
+  padding: 4px 16px 16px 16px;
+  max-width: 60%;
+  margin: 80px auto 24px;
+  text-align: left;
+}
+
+.gh-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+.gh-card-header h2 {
+  font-size: 1.15em;
+}
+
+.gh-btn {
+  background-color: #24292e;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.gh-btn:hover {
+  background-color: #1b2025;
+  color: #e6e6e6;
+}
+
+.gh-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.gh-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid var(--nav-surface-border);
+  object-fit: cover;
+}
+
+.gh-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gh-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.gh-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.gh-login {
+  color: var(--really-muted);
+  font-size: 0.95rem;
+}
+
+.gh-bio {
+  margin: 0;
+  color: rgb(184, 189, 189);
+}
+
+.gh-stats {
+  display: flex;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.gh-contrib {
+  background: var(--tech-card-bg);
+  border: 1px solid var(--nav-surface-border);
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.85;
+}
+
+.gh-contrib-muted {
+  opacity: 0.7;
+}
+
+.gh-error,
+.gh-skeleton {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .gh-body {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .gh-avatar {
+    width: 64px;
+    height: 64px;
+  }
+}

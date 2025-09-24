@@ -10,6 +10,7 @@ import Resume from "./pages/Resume";
 import Education from "./pages/Education";
 import ProjectOne from "./pages/projects-details/ProjectOne";
 import ProjectTwo from "./pages/projects-details/ProjectTwo";
+import GithubProfileCard from "./components/GithubProfileCard";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -97,6 +98,9 @@ const App = () => {
                 </span>
                 &nbsp;that I have worked on using some of these tools.
               </p>
+
+              <GithubProfileCard username="yinndlovu" />
+
               <div id="contact-section">
                 <ContactForm inline />
               </div>

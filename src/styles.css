@@ -113,6 +113,15 @@ body {
   color: #2a2f36;
 }
 
+:root[data-theme="light"] .contact-form-submit-button {
+  color: #2a2f36;
+}
+
+:root[data-theme="light"] .contact-form-submit-button:hover {
+  color: #333941;
+  background-color: #bbc1ca;
+}
+
 .about-card {
   background: var(--nav-surface-opaque);
   border: 1px solid var(--nav-surface-border);
