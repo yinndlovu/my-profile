@@ -164,7 +164,7 @@ body {
   border-radius: 24px;
   padding: 20px;
   margin: 120px auto 24px;
-  max-width: 75%;
+  max-width: 80%;
   text-align: center;
 }
 
@@ -243,6 +243,12 @@ body {
   .about-card {
     grid-template-columns: 1fr;
     margin: 100px auto 24px;
+    max-width: 85;
+  }
+
+  .tech-stack-card {
+    margin: 100px auto 16px;
+    max-width: 85%;
   }
 
   .about-me-title {
@@ -281,6 +287,12 @@ body {
   .about-card {
     grid-template-columns: 1fr;
     margin: 100px auto 24px;
+    max-width: 90%;
+  }
+
+  .tech-stack-card {
+    margin: 80px auto 12px;
+    max-width: 90%;
   }
 
   .app-container .tech-stack {

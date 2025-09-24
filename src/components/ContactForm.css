@@ -181,3 +181,9 @@
 .contact-inline-form textarea {
   height: 100px;
 }
+
+@media (max-width: 600px) {
+  .contact-inline {
+    margin: 20px auto 110px;
+  }
+}

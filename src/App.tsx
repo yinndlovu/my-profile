@@ -11,7 +11,14 @@ import Education from "./pages/Education";
 import ProjectOne from "./pages/projects-details/ProjectOne";
 import ProjectTwo from "./pages/projects-details/ProjectTwo";
 import GithubProfileCard from "./components/GithubProfileCard";
-import { Routes, Route, Navigate, useNavigate, useLocation, Link } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useNavigate,
+  useLocation,
+  Link,
+} from "react-router-dom";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -56,7 +63,11 @@ const Home = () => {
 
       <br></br>
       <p className="prompt">
-        See the <Link className="projects-link" to="/projects">projects</Link>&nbsp;that I have worked on using some of these tools.
+        See the{" "}
+        <Link className="projects-link" to="/projects">
+          projects
+        </Link>
+        &nbsp;that I have worked on using some of these tools.
       </p>
 
       <GithubProfileCard username="yinndlovu" />
@@ -76,10 +87,14 @@ const App = () => {
     if (location.pathname !== "/home") {
       navigate("/home");
       setTimeout(() => {
-        document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("contact-section")
+          ?.scrollIntoView({ behavior: "smooth" });
       }, 50);
     } else {
-      document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("contact-section")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -93,7 +108,10 @@ const App = () => {
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/lecturers-report-system" element={<ProjectOne />} />
+            <Route
+              path="/projects/lecturers-report-system"
+              element={<ProjectOne />}
+            />
             <Route path="/projects/pinky-promises" element={<ProjectTwo />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/education" element={<Education />} />

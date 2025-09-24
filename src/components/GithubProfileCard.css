@@ -114,4 +114,10 @@
     width: 64px;
     height: 64px;
   }
+  .gh-card {
+    padding: 4px 16px 16px 16px;
+    max-width: 75%;
+    margin: 60px auto 24px;
+    text-align: left;
+  }
 }
