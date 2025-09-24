@@ -9,7 +9,6 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({
-  goBack,
   goToProjectOneDetails,
   goToProjectTwoDetails,
 }) => {
@@ -17,68 +16,76 @@ const Projects: React.FC<ProjectsProps> = ({
     document.title = "Projects | Yin";
   }, []);
 
+  const projects = [
+    {
+      id: 1,
+      title: "Lecturers Report System",
+      descriptionHtml: content.projectOneDescription,
+      githubUrl: null as string | null,
+      onDetails: goToProjectOneDetails,
+    },
+    {
+      id: 2,
+      title: "Pinky Promises",
+      descriptionHtml: content.projectTwoDescription,
+      githubUrl: "https://github.com/yinndlovu/pinky-promises",
+      onDetails: goToProjectTwoDetails,
+    },
+  ];
+
   return (
     <div className="projects-container">
       <h2 className="my-projects-title">Projects</h2>
-      <div className="project-title-row">
-        <p className="project-title">1. Lecturers Report System</p>
-        <button
-          onClick={goToProjectOneDetails}
-          title="View project details"
-          className="project-title-link"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M14 3h7m0 0v7m0-7L10 14m-4 0v7h7"
-            />
-          </svg>
-        </button>
-      </div>
-      <br></br>
-      <p
-        className="project-desc"
-        dangerouslySetInnerHTML={{ __html: content.projectOneDescription }}
-      ></p>
 
-      <div className="project-title-row">
-        <p className="project-title">2. Pinky Promises</p>
-        <button
-          onClick={goToProjectTwoDetails}
-          title="View project details"
-          className="project-title-link"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M14 3h7m0 0v7m0-7L10 14m-4 0v7h7"
-            />
-          </svg>
-        </button>
+      <div className="projects-list">
+        {projects.map((p, idx) => (
+          <div key={p.id} className="project-card">
+            <div className="project-left">
+              <h3 className="project-title">
+                {idx + 1}. {p.title}
+              </h3>
+              <div
+                className="project-desc"
+                dangerouslySetInnerHTML={{ __html: p.descriptionHtml }}
+              />
+            </div>
+
+            <div className="project-right">
+              <div className="project-actions-top">
+                {p.githubUrl ? (
+                  <a
+                    href={p.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-github"
+                    title="Open GitHub repository"
+                  >
+                    GitHub
+                  </a>
+                ) : (
+                  <span
+                    className="btn btn-github disabled"
+                    aria-disabled="true"
+                    title="Repository unavailable"
+                  >
+                    GitHub
+                  </span>
+                )}
+              </div>
+
+              <div className="project-actions-bottom">
+                <button
+                  onClick={p.onDetails}
+                  className="btn btn-details"
+                  title="View project details"
+                >
+                  Details
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <br></br>
-      <p
-        className="project-desc"
-        dangerouslySetInnerHTML={{ __html: content.projectTwoDescription }}
-      ></p>
 
       <div className="mini-projects-section">
         <h3>
@@ -93,10 +100,6 @@ const Projects: React.FC<ProjectsProps> = ({
           .
         </h3>
       </div>
-
-      <button onClick={goBack} className="projects-back-button">
-        Home
-      </button>
     </div>
   );
 };

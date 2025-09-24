@@ -10,8 +10,8 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) => {
   const items = [
     { id: "home", label: "Home" },
-    { id: "projects", label: "Projects" },
-    { id: "resume", label: "Resume" },
+    { id: "projects", label: "Portfolio" },
+    { id: "resume", label: "Experience" },
     { id: "education", label: "Education" },
   ];
 

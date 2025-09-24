@@ -68,6 +68,7 @@ const App = () => {
                 const parts = content.aboutMeText.split("<br></br>");
                 const para1 = (parts[0] || "").trim();
                 const para2 = (parts[1] || "").trim();
+                const para3 = (parts[2] || "").trim();
                 return (
                   <div className="about-card">
                     <div className="about-col">
@@ -75,6 +76,9 @@ const App = () => {
                     </div>
                     <div className="about-col">
                       <p dangerouslySetInnerHTML={{ __html: para2 }}></p>
+                    </div>
+                    <div className="about-col">
+                      <p dangerouslySetInnerHTML={{ __html: para3 }}></p>
                     </div>
                   </div>
                 );
@@ -85,7 +89,7 @@ const App = () => {
                   <TechStack />
                 </div>
               </div>
-              
+
               <br></br>
               <p className="prompt">
                 See the{" "}

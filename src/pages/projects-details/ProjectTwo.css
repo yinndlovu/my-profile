@@ -13,7 +13,7 @@
   margin-bottom: 8px;
 }
 
-.project-two-details .subtitle {
+.project-two-details .project-two-subtitle {
   font-size: 1.2rem;
   color: #b0c4de;
   margin-bottom: 24px;
@@ -114,7 +114,7 @@
     font-size: 1.6rem;
   }
 
-  .project-two-details .subtitle {
+  .project-two-details .project-two-subtitle {
     font-size: 0.8rem;
   }
 
@@ -142,7 +142,7 @@
     font-size: 1.8rem;
   }
 
-  .project-two-details .subtitle {
+  .project-two-details .project-two-subtitle {
     font-size: 1rem;
   }
 

@@ -13,7 +13,7 @@
   margin-bottom: 8px;
 }
 
-.project-one-details .subtitle {
+.project-one-details .project-one-subtitle {
   font-size: 1.2rem;
   color: #b0c4de;
   margin-bottom: 24px;
@@ -114,7 +114,7 @@
     font-size: 1.6rem;
   }
 
-  .project-one-details .subtitle {
+  .project-one-details .project-one-subtitle {
     font-size: 0.8rem;
   }
 
@@ -138,7 +138,7 @@
     font-size: 1.8rem;
   }
 
-  .project-one-details .subtitle {
+  .project-one-details .project-one-subtitle {
     font-size: 1rem;
   }
 

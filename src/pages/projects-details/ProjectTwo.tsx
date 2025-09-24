@@ -21,13 +21,13 @@ const techStack = [
   },
 ];
 
-const ProjectTwo: React.FC<ProjectTwoProps> = ({ goBack }) => {
+const ProjectTwo: React.FC<ProjectTwoProps> = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
     <div className="project-two-details">
       <h2 className="glow-text">Pinky Promises</h2>
-      <h3 className="subtitle">
+      <h3 className="project-two-subtitle">
         A cute couples app to keep memories, play games, and stay connected
       </h3>
       <p>Some screenshots of the UI of the Pinky Promises app</p>
@@ -88,9 +88,6 @@ const ProjectTwo: React.FC<ProjectTwoProps> = ({ goBack }) => {
         <h4>What I did</h4>
         <p dangerouslySetInnerHTML={{ __html: content.myRole }}></p>
       </section>
-      <button className="project-two-back-button" onClick={goBack}>
-        Back to Projects
-      </button>
     </div>
   );
 };

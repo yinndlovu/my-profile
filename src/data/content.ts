@@ -1,35 +1,23 @@
 const content = {
-  aboutMeText: `Hi! I am Yin. I am currently a Computer Science final-year student. Close to
-graduating though, my school just needs me to complete an internship that runs
-for at least six month in order for me to be able to fulfill my graduation
-requirements.
+  aboutMeText: `Hi! I’m Yin, a full-stack developer with strong experience in back-end development. 
+  My main focus is C# and Java, along with Node.js, which I’ve used extensively in smaller projects.
 <br></br>
-I am highly experienced in back-end development, super comfortable with front-end development, 
-and also very familiar with DevOps practices. This combination allows me to not only build and 
-design applications but also understand deployment pipelines, CI/CD, and overall 
-application lifecycle management.`,
+I’m also comfortable on the front end. I enjoy mobile development with a lot of experience in React Native. 
+I’m as comfortable in web development, especially with Next.js and React.js.
+<br></br>
+My university background is rooted in Java, but much of my knowledge comes from being self-taught. 
+Below are tools I’ve learned/worked with over the years.`,
 
   techStackExplanation: `I have worked with all these technologies`,
 
-  projectTwoDescription: `A mobile application built using React Native and Expo.
+  projectTwoDescription: `A mobile application built with React Native and Expo. 
+  This was a solo project that I designed, developed, and continue to maintain. `,
 
-I have learned a lot from this project, it is by far my favorite project I have worked on so far. Its front end is open source and can be found on my 
-<a
-            href="https://github.com/yinndlovu/pinky-promises"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>.`,
-
-  projectOneDescription: `This is a very cool project I recently worked on with a team from my workplace.
-We created a Lecturers' Report System for my school, which is going to be used by lecturers to submit their reports
-and for the school to be able to keep track of them. I was a part of the back-end team on the project, using
-C# and the ASP.NET framework with the Entity Framework for the database.
+  projectOneDescription: `Collaborated with a team at my workplace to build a reporting system 
+for my former university, enabling lecturers to submit weekly reports. 
+I worked as a back-end developer using .NET and Entity Framework.
 <br></br>
-PS: I don't own this project,
-<a href="https://www.icep.co.za/" target="_blank" rel="noopener noreferrer"> ICEP </a>
-does - the place I am doing my internship at.`,
+The project is owned by <a href="https://www.icep.co.za/" target="_blank" rel="noopener noreferrer">ICEP</a>.`,
 };
 
 export default content;

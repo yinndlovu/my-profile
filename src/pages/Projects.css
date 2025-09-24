@@ -1,25 +1,100 @@
 .my-projects-title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 15px 0;
-  padding: 20px;
-}
-
-.project-desc {
-  padding-bottom: 50px;
-  font-size: 1.3rem;
-  max-width: 800px;
-  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  text-align: left;
+  letter-spacing: 1.3px;
 }
 
 .projects-container {
-  text-align: center;
-  padding: 20px;
+  max-width: 94%;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
 }
 
-.project-title {
-  font-size: 1.8rem;
-  margin: 20px 0;
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  padding: 26px 26px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.project-left .project-title {
+  font-size: 1.6rem;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.project-desc {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--really-muted);
+  max-width: 70%;
+}
+
+.project-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-width: 160px;
+}
+
+.project-actions-top,
+.project-actions-bottom {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
   font-weight: bold;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.btn-github {
+  background-color: #24292e;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-github:hover {
+  background-color: #1b2025;
+  color: #e6e6e6;
+}
+
+.btn-github.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-details {
+  background-color: darkseagreen;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-details:hover {
+  background-color: rgb(100, 129, 100);
+  color: rgb(212, 212, 212);
 }
 
 .message {
@@ -27,17 +102,6 @@
   font-size: 14px;
   padding: 15px;
   color: rgb(214, 214, 214);
-}
-
-.projects-back-button {
-  border-radius: 10px;
-  padding: 12px;
-  border: none;
-  font-weight: bold;
-  color: white;
-  background-color: darkseagreen;
-  cursor: pointer;
-  transition: background 0.2s;
 }
 
 .projects-back-button:hover {
@@ -56,15 +120,11 @@ a:hover {
   color: rgb(100, 129, 100);
 }
 
-.details-link-button:hover {
-  color: #0056b3;
-}
-
 .mini-projects-section {
-  margin-top: 15px;
+  margin-top: 32px;
   padding: 15px;
   border-radius: 12px;
-  text-align: center;
+  text-align: left;
 }
 
 .mini-projects-section h3 {
@@ -83,20 +143,34 @@ a:hover {
   color: rgb(100, 129, 100);
 }
 
+@media (max-width: 1024px) {
+  .project-desc {
+    max-width: 85%;
+  }
+}
+
 @media (max-width: 768px) {
   .my-projects-title {
     font-size: 2.5rem;
     padding: 10px;
   }
 
-  .project-title {
-    font-size: 1.3rem;
-    margin: 15px 0;
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .project-right {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
   }
 
   .project-desc {
-    padding-bottom: 35px;
+    padding-bottom: 10px;
     font-size: 1rem;
+    max-width: 100%;
   }
 
   .mini-projects-section h3 {
@@ -120,9 +194,8 @@ a:hover {
     padding: 5px;
   }
 
-  .project-title {
-    font-size: 1.2rem;
-    margin: 10px 0;
+  .project-left .project-title {
+    font-size: 1.3rem;
   }
 
   .mini-projects-section {
@@ -136,7 +209,7 @@ a:hover {
   }
 
   .project-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .message {
@@ -145,37 +218,5 @@ a:hover {
 }
 
 .project-title-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
-}
-
-.project-title-row .project-title {
-  margin: 0;
-}
-
-.project-title-link {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  color: inherit;
-}
-
-.project-title-link:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #b0c4de;
-}
-
-.project-title-link:focus:not(:focus-visible) {
-  outline: none;
-  box-shadow: none;
-}
-
-.project-title-link:active svg {
-  color: #7e91a5;
-  transition: color 0.1s;
+  display: none;
 }

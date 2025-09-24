@@ -37,13 +37,13 @@ const techStack = [
   },
 ];
 
-const ProjectOne: React.FC<ProjectOneProps> = ({ goBack }) => {
+const ProjectOne: React.FC<ProjectOneProps> = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
     <div className="project-one-details">
       <h2 className="glow-text">TUT Reports Hub</h2>
-      <h3 className="subtitle">
+      <h3 className="project-one-subtitle">
         A digital solution for creating and managing lecturer weekly reports
       </h3>
       <p>Some screenshots of the UI of this web application</p>
@@ -102,9 +102,6 @@ const ProjectOne: React.FC<ProjectOneProps> = ({ goBack }) => {
         <h4>My role in the project</h4>
         <p dangerouslySetInnerHTML={{ __html: content.myRole }}></p>
       </section>
-      <button className="project-one-back-button" onClick={goBack}>
-        Back to Projects
-      </button>
     </div>
   );
 };
