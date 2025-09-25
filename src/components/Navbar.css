@@ -35,6 +35,7 @@
   top: 14px;
   transform: translateX(-50%);
 }
+
 .navbar-inline.scrolled .nav-logo {
   display: none;
   top: 12px;

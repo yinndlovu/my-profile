@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProjectOne.css";
 import ScreenshotOne from "../../assets/project-one/screenshot-1.png";
 import ScreenshotTwo from "../../assets/project-one/screenshot-2.png";
@@ -35,6 +35,10 @@ const techStack = [
 
 const ProjectOne: React.FC = () => {
   const [selected, setSelected] = useState<number | null>(null);
+
+  useEffect(() => {
+    document.title = "Lecturers Report System | Yin";
+  }, []);
 
   return (
     <div className="project-one-details">

@@ -60,6 +60,7 @@
   line-height: 1.5;
   color: var(--really-muted);
   max-width: 70%;
+  font-weight: 500;
 }
 
 .duration {

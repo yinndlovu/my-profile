@@ -120,4 +120,19 @@
     margin: 60px auto 24px;
     text-align: left;
   }
+  .gh-bio {
+    font-size: 0.9rem;
+  }
+  .gh-name {
+    font-size: 1.10rem;
+  }
+  .gh-login {
+    font-size: 0.85rem;
+  }
+  .gh-stats {
+    font-size: 0.85rem;
+  }
+  .gh-card-header h2 {
+    font-size: 1em;
+  }
 }

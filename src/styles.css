@@ -240,10 +240,20 @@ body {
     padding-top: 90px;
   }
 
+  .subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+  }
+
   .about-card {
     grid-template-columns: 1fr;
     margin: 100px auto 24px;
     max-width: 85;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
   .tech-stack-card {
@@ -261,6 +271,7 @@ body {
 
   .prompt {
     font-size: 1rem;
+    padding-top: 15px;
   }
 }
 
@@ -284,10 +295,20 @@ body {
     padding-top: 90px;
   }
 
+  .subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+  }
+
   .about-card {
     grid-template-columns: 1fr;
     margin: 100px auto 24px;
     max-width: 90%;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+    line-height: 1.3;
   }
 
   .tech-stack-card {
@@ -308,6 +329,7 @@ body {
   }
 
   .prompt {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    padding-top: 10px;
   }
 }

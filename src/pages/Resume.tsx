@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Resume.css";
 
 const Resume: React.FC = () => {
+  useEffect(() => {
+    document.title = "Experience | Yin";
+  }, []);
+
   return (
     <div className="resume">
       <h2>Experience</h2>
