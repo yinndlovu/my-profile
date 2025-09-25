@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./GithubProfileCard.css";
-import { fetchContributions } from "../services/fetchContribution";
 
 type GithubUser = {
   login: string;
@@ -17,8 +16,6 @@ const GithubProfileCard = ({ username }: { username: string }) => {
   const [data, setData] = useState<GithubUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
-  const [contrib, setContrib] = useState<number | null>(null);
-  const [contribErr, setContribErr] = useState<string | null>(null);
 
   useEffect(() => {
     let ignore = false;
@@ -39,31 +36,6 @@ const GithubProfileCard = ({ username }: { username: string }) => {
       })
       .finally(() => {
         if (!ignore) setLoading(false);
-      });
-    return () => {
-      ignore = true;
-    };
-  }, [username]);
-
-  useEffect(() => {
-    let ignore = false;
-    const token = (import.meta as any)?.env?.VITE_GITHUB_TOKEN as
-      | string
-      | undefined;
-    if (!token) {
-      setContribErr(null);
-      setContrib(null);
-      return;
-    }
-    setContribErr(null);
-    setContrib(null);
-    fetchContributions(username, token)
-      .then((count) => {
-        if (!ignore) setContrib(count);
-      })
-      .catch((e: any) => {
-        if (!ignore)
-          setContribErr(e?.message || "Failed to load contributions");
       });
     return () => {
       ignore = true;
@@ -108,22 +80,6 @@ const GithubProfileCard = ({ username }: { username: string }) => {
               <span>
                 <strong>{data.public_repos}</strong> repositories
               </span>
-              {contrib !== null && (
-                <span
-                  className="gh-contrib"
-                  title="Total contributions in the last year"
-                >
-                  {contrib} contributions
-                </span>
-              )}
-              {contribErr && (
-                <span
-                  className="gh-contrib gh-contrib-muted"
-                  title={contribErr}
-                >
-                  contributions unavailable
-                </span>
-              )}
             </div>
           </div>
         </div>
