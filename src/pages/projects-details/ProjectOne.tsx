@@ -7,7 +7,7 @@ import ScreenshotFour from "../../assets/project-one/screenshot-4.png";
 import content from "../../data/projects/projectOneContent";
 import ReactLogo from "../../assets/logos/react_logo.png";
 import NetCoreLogo from "../../assets/logos/netcore_logo.svg.png";
-import MsSqlLogo from "../../assets/logos/mssql_logo.svg";
+import MsSqlLogo from "../../assets/logos/mssql_logo.png";
 import AwsLogo from "../../assets/logos/Amazon_Web_Services_Logo.svg.png";
 
 const techStack = [

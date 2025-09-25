@@ -70,6 +70,29 @@
   position: relative;
 }
 
+.tech-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.tech-item:hover .tech-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 .tech-item:hover {
   background: var(--tech-card-bg-hover);
   border-color: var(--nav-border-hover);
