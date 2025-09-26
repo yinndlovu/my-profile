@@ -1,138 +1,57 @@
-.gh-card {
-  background: var(--nav-surface-opaque);
-  border: 1px solid var(--nav-surface-border);
-  border-radius: 24px;
-  padding: 4px 16px 16px 16px;
-  max-width: 60%;
-  margin: 80px auto 24px;
-  text-align: left;
+.gh-card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.gh-card-header {
+.gh-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0px;
-}
-
-.gh-card-header h2 {
-  font-size: 1.15em;
-}
-
-.gh-btn {
-  background-color: #24292e;
-  color: white;
+  background: var(--nav-surface-opaque, #0d0d0d);
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: var(--text, white);
   text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  padding: 8px 10px;
-  cursor: pointer;
-  font-size: 0.8em;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s;
+  max-width: 340px;
+  width: 100%;
 }
 
-.gh-btn:hover {
-  background-color: #1b2025;
-  color: #e6e6e6;
+.gh-card:hover {
+  background: var(--nav-hover, #1a1a1a);
+  color: var(--text, white);
 }
 
-.gh-body {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px;
+.gh-left {
+  display: flex;
   align-items: center;
+  gap: 10px;
 }
 
-.gh-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 1px solid var(--nav-surface-border);
-  object-fit: cover;
+.gh-icon {
+  width: 24px;
+  height: 24px;
 }
 
-.gh-info {
+.gh-text {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.gh-name-row {
-  display: flex;
+  flex-direction: row;
   align-items: baseline;
   gap: 8px;
 }
 
-.gh-name {
-  font-size: 1.25rem;
+.gh-username {
   font-weight: 700;
-}
-
-.gh-login {
-  color: var(--really-muted);
   font-size: 0.95rem;
-}
-
-.gh-bio {
-  margin: 0;
-  color: rgb(184, 189, 189);
 }
 
 .gh-stats {
-  display: flex;
-  gap: 14px;
-  color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.75rem;
+  font-weight: light;
+  color: var(--muted, #c7c7c7);
 }
 
-.gh-contrib {
-  background: var(--tech-card-bg);
-  border: 1px solid var(--nav-surface-border);
-  color: var(--text);
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-size: 0.85;
-}
-
-.gh-contrib-muted {
-  opacity: 0.7;
-}
-
-.gh-error,
-.gh-skeleton {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-@media (max-width: 600px) {
-  .gh-body {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .gh-avatar {
-    width: 64px;
-    height: 64px;
-  }
-  .gh-card {
-    padding: 4px 16px 16px 16px;
-    max-width: 75%;
-    margin: 60px auto 24px;
-    text-align: left;
-  }
-  .gh-bio {
-    font-size: 0.9rem;
-  }
-  .gh-name {
-    font-size: 1.10rem;
-  }
-  .gh-login {
-    font-size: 0.85rem;
-  }
-  .gh-stats {
-    font-size: 0.85rem;
-  }
-  .gh-card-header h2 {
-    font-size: 1em;
-  }
+.gh-arrow {
+  flex-shrink: 0;
 }

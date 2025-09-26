@@ -1,21 +1,42 @@
 import { useEffect, useState } from "react";
+import { FiArrowUpRight } from "react-icons/fi";
+import githubLogoWhite from "../assets/logos/github_icon.webp";
+import githubLogoBlack from "../assets/logos/github_logo_black.png";
 import "./GithubProfileCard.css";
 
 type GithubUser = {
   login: string;
-  name: string | null;
-  avatar_url: string;
-  html_url: string;
-  bio: string | null;
-  followers: number;
-  following: number;
   public_repos: number;
+  html_url: string;
+};
+
+const getTheme = (): "light" | "dark" => {
+  const attr = document.documentElement.getAttribute("data-theme");
+  return attr === "light" ? "light" : "dark";
 };
 
 const GithubProfileCard = ({ username }: { username: string }) => {
   const [data, setData] = useState<GithubUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
+  const [theme, setTheme] = useState<"light" | "dark">(getTheme());
+
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.type === "attributes" && m.attributeName === "data-theme") {
+          setTheme(getTheme());
+        }
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     let ignore = false;
@@ -42,49 +63,40 @@ const GithubProfileCard = ({ username }: { username: string }) => {
     };
   }, [username]);
 
-  return (
-    <section className="gh-card" aria-label="GitHub profile">
-      <div className="gh-card-header">
-        <h2>GitHub</h2>
-        {data?.html_url && (
-          <a
-            className="gh-btn"
-            href={data.html_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Open GitHub profile"
-          >
-            View Profile
-          </a>
-        )}
-      </div>
+  if (loading) {
+    return <div className="gh-skeleton">loading…</div>;
+  }
 
-      {loading ? (
-        <div className="gh-skeleton">Loading profile…</div>
-      ) : err ? (
-        <div className="gh-error">Could not load GitHub profile. {err}</div>
-      ) : data ? (
-        <div className="gh-body">
-          <img
-            src={data.avatar_url}
-            alt={`${data.login} avatar`}
-            className="gh-avatar"
-          />
-          <div className="gh-info">
-            <div className="gh-name-row">
-              <span className="gh-name">{data.name || data.login}</span>
-              {data.name && <span className="gh-login">@{data.login}</span>}
-            </div>
-            {data.bio && <p className="gh-bio">{data.bio}</p>}
-            <div className="gh-stats">
-              <span>
-                <strong>{data.public_repos}</strong> repositories
-              </span>
-            </div>
+  if (err) {
+    return <div className="gh-error">{err}</div>;
+  }
+
+  if (!data) {
+    return null;
+  }
+
+  const githubLogo = theme === "light" ? githubLogoBlack : githubLogoWhite;
+
+  return (
+    <div className="gh-card-wrapper">
+      <a
+        href={data.html_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="gh-card"
+      >
+        <div className="gh-left">
+          <img src={githubLogo} alt="GitHub" className="gh-icon" />
+          <div className="gh-text">
+            <span className="gh-username">{data.login}</span>
+            <span className="gh-stats">
+              <strong>{data.public_repos}</strong> Repositories
+            </span>
           </div>
         </div>
-      ) : null}
-    </section>
+        <FiArrowUpRight size={20} className="gh-arrow" />
+      </a>
+    </div>
   );
 };
 
