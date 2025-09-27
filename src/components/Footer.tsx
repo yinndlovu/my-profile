@@ -1,37 +1,44 @@
-import './Footer.css';
+import "./Footer.css";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import siteLogo from "../assets/logos/site_logo.png";
 
-const Footer = ({ onContactClick }: { onContactClick: () => void }) => {
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <img src={siteLogo} alt="Yin Logo" className="footer-logo" />
 
-    return (
-        <footer className="footer">
-            <div className="footer-content">
-                <h3>Where to find Yin</h3>
-                <div className="social-links">
-                    <a href="https://github.com/yinndlovu" 
-                        target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="social-icon" />
-                    </a>
-                    <a href="#" 
-                        target="_blank" rel="noopener noreferrer">
-                        <FaDiscord className="social-icon" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/yinhlandlovu" 
-                        target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className="social-icon" />
-                    </a>
-                </div>
-                <p>
-                    Or&nbsp;
-                    <span className="contact-link" onClick={onContactClick}>
-                        Contact me
-                    </span>
-                    &nbsp;directly
-                </p>
-            </div>
-            <p className="footer-rights">© {new Date().getFullYear()} Yin | All Rights Reserved</p>
-        </footer>
-    );
+        <h3>where to find yin</h3>
+        <div className="social-links">
+          <a
+            href="https://github.com/yinndlovu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="social-icon" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <FaDiscord className="social-icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yinhlandlovu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="social-icon" />
+          </a>
+        </div>
+
+        <a href="mailto:starboy@yinn.dev" className="contact-link">
+          starboy@yinn.dev
+        </a>
+      </div>
+
+      <p className="footer-rights">
+        © {new Date().getFullYear()} Yin | All Rights Reserved
+      </p>
+    </footer>
+  );
 };
 
 export default Footer;
