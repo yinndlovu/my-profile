@@ -15,7 +15,6 @@ import {
   Routes,
   Route,
   Navigate,
-  useNavigate,
   useLocation,
   Link,
 } from "react-router-dom";
@@ -80,24 +79,6 @@ const Home = () => {
 };
 
 const App = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleContactClick = () => {
-    if (location.pathname !== "/home") {
-      navigate("/home");
-      setTimeout(() => {
-        document
-          .getElementById("contact-section")
-          ?.scrollIntoView({ behavior: "smooth" });
-      }, 50);
-    } else {
-      document
-        .getElementById("contact-section")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       <div className="app-container">
@@ -119,7 +100,7 @@ const App = () => {
           </Routes>
         </div>
       </div>
-      <Footer onContactClick={handleContactClick} />
+      <Footer />
     </>
   );
 };
