@@ -3,7 +3,7 @@ const content = {
   My main focus is C# and Java, along with Node.js, which I’ve used extensively in smaller projects.
 <br></br>
 I’m also comfortable on the front end. I enjoy mobile development with a lot of experience in React Native. 
-I’m as comfortable in web development, especially with Next.js and React.js.
+I’m as comfortable in web development, particularly with Next.js and React.js.
 <br></br>
 My university background is rooted in Java, but much of my knowledge comes from being self-taught. 
 Below are tools I’ve learned/worked with over the years.`,
