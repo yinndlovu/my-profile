@@ -85,4 +85,9 @@
   .footer-content {
     gap: 8px;
   }
+
+  .footer-logo {
+    height: 25px;
+    width: auto;
+  }
 }
