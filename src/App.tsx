@@ -16,7 +16,6 @@ import {
   Route,
   Navigate,
   useLocation,
-  Link,
 } from "react-router-dom";
 
 const ScrollToTop = () => {
@@ -59,15 +58,6 @@ const Home = () => {
           <TechStack />
         </div>
       </div>
-
-      <br></br>
-      <p className="prompt">
-        See the{" "}
-        <Link className="projects-link" to="/projects">
-          projects
-        </Link>
-        &nbsp;that I have worked on using some of these tools.
-      </p>
 
       <GithubProfileCard username="yinndlovu" />
 

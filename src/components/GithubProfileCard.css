@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
   background: var(--nav-surface-opaque, #0d0d0d);
+  border: 1px solid var(--nav-surface-border);
   border-radius: 14px;
   padding: 12px 16px;
   color: var(--text, white);

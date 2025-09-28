@@ -163,7 +163,7 @@ body {
   border: 1px solid var(--nav-surface-border);
   border-radius: 24px;
   padding: 20px;
-  margin: 120px auto 24px;
+  margin: 80px auto 150px;
   max-width: 80%;
   text-align: center;
 }
@@ -257,7 +257,7 @@ body {
   }
 
   .tech-stack-card {
-    margin: 100px auto 16px;
+    margin: 60px auto 120px;
     max-width: 85%;
   }
 
@@ -312,7 +312,7 @@ body {
   }
 
   .tech-stack-card {
-    margin: 80px auto 12px;
+    margin: 50px auto 100px;
     max-width: 90%;
   }
 
