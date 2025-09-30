@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         <a href="mailto:starboy@yinn.dev" className="contact-link">
-          starboy@yinn.dev
+          yin@yinn.dev
         </a>
       </div>
 
