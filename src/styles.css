@@ -117,6 +117,10 @@ body {
   color: #2f3847;
 }
 
+:root[data-theme="light"] .gh-card:hover {
+  background: #e6e6e6;
+}
+
 :root[data-theme="light"] .contact-form-submit-button {
   color: #2a2f36;
 }
