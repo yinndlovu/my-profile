@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const items = [
-    { to: "/home", label: "Home" },
+    { to: "/", label: "Home" },
     { to: "/projects", label: "Portfolio" },
     { to: "/resume", label: "Experience" },
     { to: "/education", label: "Education" },
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
       <div className={`nav-backdrop${scrolled ? " show" : ""}`} />
 
       <nav className={`navbar-inline${scrolled ? " scrolled" : ""}`}>
-        <Link to="/home">
+        <Link to="/">
           <img src={siteLogo} alt="Site logo" className="nav-logo" />
         </Link>
         <ul className="nav-buttons">
