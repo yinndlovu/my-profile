@@ -76,8 +76,7 @@ const App = () => {
         <ScrollToTop />
         <div className="fade-page visible">
           <Routes>
-            <Route path="/" element={<Navigate to="/home" replace />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route
               path="/projects/lecturers-report-system"
