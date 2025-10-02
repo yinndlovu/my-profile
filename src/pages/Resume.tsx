@@ -19,7 +19,7 @@ const Resume: React.FC = () => {
         <div className="experience-item">
           <div className="experience-header">
             <h3 className="company-name glow-text">ICEP</h3>
-            <span className="duration">March 2025 - Sep 2025</span>
+            <span className="duration">Mar 2025 - Sept 2025</span>
           </div>
           <div className="job-title">Software Developer Intern</div>
           <div className="job-description">
