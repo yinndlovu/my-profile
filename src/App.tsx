@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <>
       <h1 className="main-title">Yinhla Ndlovu</h1>
-      <p className="subtitle">Software Engineer | Full‑stack Developer</p>
+      <p className="subtitle">Software Engineer | Back-end Developer</p>
 
       <div className="about-card">
         <div className="about-col">
