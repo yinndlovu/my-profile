@@ -6,10 +6,13 @@ const content = {
           reports for academic staff. The goal was to reduce paperwork, minimize errors, and provide a centralized 
           digital platform for all reporting needs.`,
 
-  myRole: `I was a back-end developer for this project. Working alongside a team of skilled front-end and back-end developers.
-          I created multiple back-end methods to simplify processes, make the application fast, efficient, responsive, and
-          scabalable. It was a pretty exciting adventure for me, learning and familiarizing myself with C#, and I must say 
-          it's a pretty fun language to code in, and I am planning on using it for other projects next too.`,
+  myRole: `- Worked as a back-end developer, using .NET and SQL Server (Entity Framework).
+           <br></br>
+           - Helped design and implement the database schema.
+           <br></br>
+           - Developed optimized, secure methods for data access. 
+           <br></br>
+           - Handled DevOps responsibilities, including deploying and maintaining the back-end environment.`,
 };
 
 export default content;
