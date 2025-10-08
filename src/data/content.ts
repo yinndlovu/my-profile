@@ -1,5 +1,5 @@
 const content = {
-  aboutMeText: `Hi! I'm Yin, a back-end developer with strong experience in C# and Java, 
+  aboutMeText: `Hi! I'm Yin, a software engineer with strong experience in C# and Java, 
     along with Node.js, which I typically use for smaller projects.
     <br></br>
     With full-stack development experience, I'm comfortable on the front end too. 
