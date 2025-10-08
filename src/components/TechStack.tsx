@@ -1,7 +1,7 @@
 import "./TechStack.css";
 import { useEffect, useState } from "react";
 
-import javaLogo from "../assets/logos/java_logo.png";
+import javaLogo from "../assets/logos/logo_java_v2.png";
 import kotlinLogo from "../assets/logos/kotlin_logo.png";
 import jsLogo from "../assets/logos/js_logo.png";
 import tsLogo from "../assets/logos/ts_logo.png";
