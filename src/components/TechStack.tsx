@@ -5,7 +5,7 @@ import javaLogo from "../assets/logos/java_logo.png";
 import kotlinLogo from "../assets/logos/kotlin_logo.png";
 import jsLogo from "../assets/logos/js_logo.png";
 import tsLogo from "../assets/logos/ts_logo.png";
-import nodeLogo from "../assets/logos/nodejs_logo.png";
+import nodeLogo from "../assets/logos/logo_nodejs.png";
 import springLogo from "../assets/logos/springboot_logo.png";
 import mysqlLogo from "../assets/logos/mysql_logo.png";
 import mssqlLogo from "../assets/logos/mssql_logo.png";

@@ -8,12 +8,24 @@ import ScreenshotFive from "../../assets/project-two/screenshot-5.png";
 import ScreenshotSix from "../../assets/project-two/screenshot-6.png";
 import content from "../../data/projects/projectTwoContent";
 import ReactLogo from "../../assets/logos/react_logo.png";
+import nodeJsLogo from "../../assets/logos/logo_nodejs.png";
+import mySqlLogo from "../../assets/logos/mysql_logo.png";
 
 const techStack = [
   {
     name: "React Native",
     icon: ReactLogo,
-    usage: "React Native (front-end framework)",
+    usage: "React Native (frontend)",
+  },
+  {
+    name: "Node.js",
+    icon: nodeJsLogo,
+    usage: "Backend",
+  },
+  {
+    name: "MySQL",
+    icon: mySqlLogo,
+    usage: "Database",
   },
 ];
 
