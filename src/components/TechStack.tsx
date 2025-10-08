@@ -7,7 +7,7 @@ import jsLogo from "../assets/logos/js_logo.png";
 import tsLogo from "../assets/logos/ts_logo.png";
 import nodeLogo from "../assets/logos/logo_nodejs.png";
 import springLogo from "../assets/logos/springboot_logo.png";
-import mysqlLogo from "../assets/logos/mysql_logo.png";
+import mysqlLogo from "../assets/logos/logo_mysql.png";
 import mssqlLogo from "../assets/logos/mssql_logo.png";
 import reactLogo from "../assets/logos/react_logo.png";
 import csharpLogo from "../assets/logos/csharp_logo.png";
