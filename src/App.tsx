@@ -28,7 +28,7 @@ const ScrollToTop = () => {
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Main page | Yin";
+    document.title = "Home | Yin";
   }, []);
 
   const parts = content.aboutMeText.split("<br></br>");
@@ -77,13 +77,13 @@ const App = () => {
         <div className="fade-page visible">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/portfolio" element={<Projects />} />
             <Route
-              path="/projects/lecturers-report-system"
+              path="/portfolio/lecturers-report-system"
               element={<ProjectOne />}
             />
-            <Route path="/projects/pinky-promises" element={<ProjectTwo />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route path="/portfolio/pinky-promises" element={<ProjectTwo />} />
+            <Route path="/experience" element={<Resume />} />
             <Route path="/education" element={<Education />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>

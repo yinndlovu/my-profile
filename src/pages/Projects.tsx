@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Projects: React.FC = () => {
   useEffect(() => {
-    document.title = "Projects | Yin";
+    document.title = "Portfolio | Yin";
   }, []);
 
   const projects = [
@@ -14,14 +14,14 @@ const Projects: React.FC = () => {
       title: "Lecturers Report System",
       descriptionHtml: content.projectOneDescription,
       githubUrl: null as string | null,
-      detailsPath: "/projects/lecturers-report-system",
+      detailsPath: "/portfolio/lecturers-report-system",
     },
     {
       id: 2,
       title: "Pinky Promises",
       descriptionHtml: content.projectTwoDescription,
       githubUrl: "https://github.com/yinndlovu/pinky-promises",
-      detailsPath: "/projects/pinky-promises",
+      detailsPath: "/portfolio/pinky-promises",
     },
   ];
 

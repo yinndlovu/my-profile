@@ -33,7 +33,7 @@ const ProjectTwo: React.FC = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Resume | Yin";
+    document.title = "Pinky Promises | Yin";
   }, []);
 
   return (
