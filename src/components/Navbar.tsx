@@ -6,8 +6,8 @@ import { NavLink, Link } from "react-router-dom";
 const Navbar: React.FC = () => {
   const items = [
     { to: "/", label: "Home" },
-    { to: "/projects", label: "Portfolio" },
-    { to: "/resume", label: "Experience" },
+    { to: "/portfolio", label: "Portfolio" },
+    { to: "/experience", label: "Experience" },
     { to: "/education", label: "Education" },
   ];
 
