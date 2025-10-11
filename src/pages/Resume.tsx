@@ -25,7 +25,7 @@ const Resume: React.FC = () => {
           <div className="job-description">
             Worked as a back-end developer on a team that built a reporting
             system for my former university, allowing lecturers to submit weekly
-            reports. I used .NET and SQL Server, and was also responsible for
+            reports. Developed the backend using .NET and SQL Server, and was also responsible for
             deploying & monitoring the backend.
           </div>
         </div>
