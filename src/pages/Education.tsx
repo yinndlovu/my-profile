@@ -16,14 +16,25 @@ const Education: React.FC = () => {
           </h3>
           <span className="period">2021 - 2025</span>
         </div>
-        <div className="course">Computer Science</div>
-      </div>
-      <div className="education-item">
-        <div className="education-header">
-          <h3 className="institution glow-text">University of Venda</h3>
-          <span className="period">2020 - 2020</span>
+        <div className="course">
+          Computer Science{" "}
+          <span
+            className="
+        course-status"
+          >
+            - Completed
+          </span>
         </div>
-        <div className="course">Mining and Environmental Geology</div>
+        <div className="course-details">
+          Focused largely on back-end development with Java and SQL databases,
+          writing reusable code, applying object-oriented programming, and
+          building scalable systems. Data structures & algorithms were also
+          covered in depth.
+          <br></br>
+          <br></br>
+          Also explored mobile development in Kotlin, web fundamentals (HTML,
+          CSS, JS), dynamic web pages, and basic cloud computing.
+        </div>
       </div>
     </div>
   );

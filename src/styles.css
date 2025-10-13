@@ -40,6 +40,8 @@
   --tech-card-bg-hover: #111316;
 
   --really-muted: rgb(172, 175, 175);
+
+  --really-really-muted: rgb(148, 148, 148);
 }
 
 :root[data-theme="light"] {
@@ -64,6 +66,8 @@
   --tech-card-bg-hover: #e9ecef;
 
   --really-muted: #555555;
+
+  --really-really-muted: #868686;
 }
 
 body {

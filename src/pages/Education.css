@@ -39,6 +39,19 @@
   margin-bottom: 8px;
 }
 
+.course-status {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--really-really-muted);
+}
+
+.course-details {
+  max-width: 75%;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-top: 8px;
+}
+
 .period {
   font-size: 0.9rem;
   color: var(--muted);
@@ -64,6 +77,14 @@
   .course {
     font-size: 1rem;
   }
+
+  .course-status {
+    font-size: 0.85rem;
+  }
+
+  .course-details {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -78,6 +99,14 @@
 
   .course {
     font-size: 0.95rem;
+  }
+
+  .course-status {
+    font-size: 0.75rem;
+  }
+
+  .course-details {
+    font-size: 0.75rem;
   }
 
   .period {
