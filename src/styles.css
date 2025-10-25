@@ -71,7 +71,8 @@
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Geist", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
