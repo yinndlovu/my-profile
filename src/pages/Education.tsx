@@ -17,7 +17,7 @@ const Education: React.FC = () => {
           <span className="period">2021 - 2025</span>
         </div>
         <div className="course">
-          Computer Science{" "}
+          Diploma in Computer Science{" "}
           <span
             className="
         course-status"
@@ -33,7 +33,7 @@ const Education: React.FC = () => {
           <br></br>
           <br></br>
           Also explored mobile development in Kotlin, web fundamentals (HTML,
-          CSS, JS), dynamic web pages, and basic cloud computing.
+          CSS, JS), dynamic web pages (JSP), and basic cloud computing.
         </div>
       </div>
     </div>

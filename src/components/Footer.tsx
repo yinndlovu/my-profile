@@ -17,7 +17,7 @@ const Footer = () => {
           >
             <FaGithub className="social-icon" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FaDiscord className="social-icon" />
           </a>
           <a
