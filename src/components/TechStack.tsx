@@ -1,5 +1,6 @@
 import "./TechStack.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { createPortal } from "react-dom";
 
 import javaLogo from "../assets/logos/logo_java_v2.png";
 import kotlinLogo from "../assets/logos/kotlin_logo.png";
@@ -17,13 +18,50 @@ import githubLogoWhite from "../assets/logos/github_icon.webp";
 import githubLogoBlack from "../assets/logos/github_logo_black.png";
 
 const languageTechStack = [
-  { name: "Java", logo: javaLogo },
-  { name: "C#", logo: csharpLogo },
-  { name: "Kotlin", logo: kotlinLogo },
-  { name: "JavaScript", logo: jsLogo },
-  { name: "TypeScript", logo: tsLogo },
-  { name: "MySQL", logo: mysqlLogo },
-  { name: "SQL Server", logo: mssqlLogo },
+  {
+    name: "Java",
+    logo: javaLogo,
+    description:
+      "Java is the first language I ever learned and my go-to when I want to solve complex problems in the backend" +
+      " or write really complex logic.",
+  },
+  {
+    name: "C#",
+    logo: csharpLogo,
+    description: "I mainly use C# when I am building .NET applications.",
+  },
+  {
+    name: "Kotlin",
+    logo: kotlinLogo,
+    description:
+      "Kotlin is my go-to for building Android apps efficiently and reliably.",
+  },
+  {
+    name: "JavaScript",
+    logo: jsLogo,
+    description:
+      "JavaScript is the language I use for adding interactivity to web pages " +
+      "and building dynamic web applications.",
+  },
+  {
+    name: "TypeScript",
+    logo: tsLogo,
+    description:
+      "TypeScript helps me make my JavaScript code more reliable and easier to maintain.",
+  },
+  {
+    name: "MySQL",
+    logo: mysqlLogo,
+    description:
+      "MySQL is a relational database I mainly use to manage structured data for my apps.",
+  },
+  {
+    name: "SQL Server",
+    logo: mssqlLogo,
+    description:
+      "SQL Server is a relational database I use to manage structured data in my apps. " +
+      "It's my preferred choice for .NET projects.",
+  },
 ];
 
 const getTheme = (): "light" | "dark" => {
@@ -33,6 +71,13 @@ const getTheme = (): "light" | "dark" => {
 
 const TechStack = () => {
   const [theme, setTheme] = useState<"light" | "dark">(getTheme());
+  const [hoveredTech, setHoveredTech] = useState<{
+    name: string;
+    description: string;
+    x: number;
+    y: number;
+  } | null>(null);
+  const techStackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new MutationObserver((mutations) => {
@@ -53,13 +98,63 @@ const TechStack = () => {
 
   const githubLogo = theme === "light" ? githubLogoBlack : githubLogoWhite;
 
+  const handleMouseEnter = (
+    tech: { name: string; description: string },
+    event: React.MouseEvent
+  ) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setHoveredTech({
+      name: tech.name,
+      description: tech.description,
+      x: rect.left + rect.width / 2,
+      y: rect.top - 10,
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredTech(null);
+  };
+
   const techStack = [
-    { name: "Node.js", logo: nodeLogo },
-    { name: "Spring Boot", logo: springLogo },
-    { name: "GitHub", logo: githubLogo },
-    { name: "React", logo: reactLogo },
-    { name: ".NET Core", logo: netCoreLogo },
-    { name: "Docker", logo: docketLogo },
+    {
+      name: "Node.js",
+      logo: nodeLogo,
+      description:
+        "Node.js is my main JavaScript runtime for most projects. I mainly use it for " +
+        "building quick and efficient applications.",
+    },
+    {
+      name: "Spring Boot",
+      logo: springLogo,
+      description:
+        "Java being the first language I learned, starting with Spring Boot for a framework felt natural." +
+        " It's great, but there are other back-end frameworks I like better.",
+    },
+    {
+      name: "GitHub",
+      logo: githubLogo,
+      description:
+        "GitHub is essential for collaboration and version control. It's what I use for all my projects.",
+    },
+    {
+      name: "React",
+      logo: reactLogo,
+      description:
+        "React is the framework I mainly use for web development, and React Native for mobile development.",
+    },
+    {
+      name: ".NET Core",
+      logo: netCoreLogo,
+      description:
+        ".NET is my favorite back-end framework for building REST APIs in large applications." +
+        " Coming from Spring Boot, I appreciate how much it simplifies things and how easy it is to learn.",
+    },
+    {
+      name: "Docker",
+      logo: docketLogo,
+      description:
+        "Docker helps me containerize applications, which simplifies testing and deployment.",
+    },
   ];
 
   const duplicationFactor = 10;
@@ -69,24 +164,50 @@ const TechStack = () => {
     .flat();
 
   return (
-    <div className="tech-stack">
-      <div className="tech-stack-slider">
-        {duplicatedTechStack.map((tech, index) => (
-          <div key={index} className="tech-item">
-            <img src={tech.logo} alt={tech.name} className="tech-logo" />
-            <span className="tech-tooltip">{tech.name}</span>
-          </div>
-        ))}
+    <>
+      <div className="tech-stack" ref={techStackRef}>
+        <div className="tech-stack-slider">
+          {duplicatedTechStack.map((tech, index) => (
+            <div
+              key={index}
+              className="tech-item"
+              onMouseEnter={(e) => handleMouseEnter(tech, e)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img src={tech.logo} alt={tech.name} className="tech-logo" />
+            </div>
+          ))}
+        </div>
+        <div className="language-tech-stack-slider">
+          {duplicatedLanguageTechStack.map((tech, index) => (
+            <div
+              key={index}
+              className="tech-item"
+              onMouseEnter={(e) => handleMouseEnter(tech, e)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img src={tech.logo} alt={tech.name} className="tech-logo" />
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="language-tech-stack-slider">
-        {duplicatedLanguageTechStack.map((tech, index) => (
-          <div key={index} className="tech-item">
-            <img src={tech.logo} alt={tech.name} className="tech-logo" />
-            <span className="tech-tooltip">{tech.name}</span>
-          </div>
-        ))}
-      </div>
-    </div>
+      {hoveredTech &&
+        createPortal(
+          <div
+            className="tech-tooltip-portal"
+            style={{
+              position: "fixed",
+              left: hoveredTech.x,
+              top: hoveredTech.y,
+              transform: "translateX(-50%)",
+              zIndex: 1000,
+            }}
+          >
+            {hoveredTech.description}
+          </div>,
+          document.body
+        )}
+    </>
   );
 };
 
