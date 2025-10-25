@@ -11,12 +11,7 @@ import Education from "./pages/Education";
 import ProjectOne from "./pages/projects-details/ProjectOne";
 import ProjectTwo from "./pages/projects-details/ProjectTwo";
 import GithubProfileCard from "./components/GithubProfileCard";
-import {
-  Routes,
-  Route,
-  Navigate,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -52,7 +47,7 @@ const Home = () => {
           <p dangerouslySetInnerHTML={{ __html: para3 }}></p>
         </div>
       </div>
-
+      
       <div className="tech-stack-card">
         <div className="tech-stack">
           <TechStack />
