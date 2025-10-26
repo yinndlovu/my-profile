@@ -71,7 +71,7 @@ const TechStack = () => {
       name: tech.name,
       description: tech.description,
       x: rect.left + rect.width / 2,
-      y: rect.top - 10,
+      y: rect.top - rect.height - 15,
     });
   };
 
