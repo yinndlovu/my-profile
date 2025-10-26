@@ -31,7 +31,7 @@
 .tech-stack-slider {
   display: flex;
   gap: 20px;
-  animation: scroll 35s linear infinite;
+  animation: scroll 180s linear infinite;
   margin-top: 10px;
 }
 
@@ -42,7 +42,7 @@
 .language-tech-stack-slider {
   display: flex;
   gap: 20px;
-  animation: scroll 35s linear infinite;
+  animation: scroll 180s linear infinite;
   margin-top: 20px;
 }
 
@@ -112,7 +112,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-125%);
+    transform: translateX(-1000%);
   }
 }
 
