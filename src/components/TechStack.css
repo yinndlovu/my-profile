@@ -71,8 +71,8 @@
 }
 
 .tech-tooltip-portal {
-  background: #333;
-  color: #fff;
+  background: var(--tech-card-bg);
+  border: 1px solid var(--nav-border);
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 1rem;
