@@ -2,7 +2,7 @@ const content = {
   aboutMeText: `Hi! I'm Yin, a software engineer with strong experience in .NET and Java,
     and Node.js with Express for smaller or quick projects.
     <br></br>
-    With full-stack development experience, I'm comfortable on the front end too. 
+    With full-stack development experience, I'm comfortable on the frontend too. 
     Particularly mobile development with React Native & web with React.
     <br></br>
     Largely self-taught, I've spent the past couple of years learning and applying 
