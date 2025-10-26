@@ -110,7 +110,7 @@ const TechStack = () => {
       logo: awsLogo,
       description:
         "AWS is great, it has everything you could need. Though there are other cloud " +
-        +"platforms I prefer, AWS offers a ton of opportunities to explore and learn new tools, which I like.",
+        "platforms I prefer, AWS offers a ton of opportunities to explore and learn new tools, which I like.",
     },
     {
       name: "Azure",
