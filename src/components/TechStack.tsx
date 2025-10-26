@@ -34,7 +34,7 @@ const languageTechStack = [
     name: "Kotlin",
     logo: kotlinLogo,
     description:
-      "Kotlin is my go-to for building Android apps efficiently and reliably.",
+      "Kotlin is my go-to for writing Android native code.",
   },
   {
     name: "JavaScript",
@@ -120,8 +120,7 @@ const TechStack = () => {
       name: "Node.js",
       logo: nodeLogo,
       description:
-        "Node.js is my main JavaScript runtime for most projects. I mainly use it for " +
-        "building quick and efficient applications.",
+        "Node.js is my main JavaScript runtime for most projects.",
     },
     {
       name: "Spring Boot",
