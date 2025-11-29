@@ -25,11 +25,12 @@ const Resume: React.FC = () => {
           <div className="job-description">
             Worked as a back-end developer on a team that built a reporting
             system for my former university, allowing lecturers to submit weekly
-            reports. Developed the backend using .NET and SQL Server, and was also responsible for
-            deploying & monitoring the backend.
+            reports. Developed the backend using .NET and SQL Server, and was
+            also responsible for deploying & monitoring the backend.
           </div>
         </div>
       </a>
+      <div className="experience-separator"></div>
       <a
         className="experience-link"
         href="https://www.altron.com/customer-success-stories/netstar-and-blink-logic"
@@ -43,9 +44,7 @@ const Resume: React.FC = () => {
             <span className="duration">Nov 2025 - Present</span>
           </div>
           <div className="job-title">Software Engineer Intern</div>
-          <div className="job-description">
-            
-          </div>
+          <div className="job-description"></div>
         </div>
       </a>
     </div>

@@ -53,9 +53,28 @@
 }
 
 .period {
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-style: italic;
+  font-size: 0.84rem;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-variant: small-caps;
+  background: var(--nav-bg);
+  color: var(--text);
+  border: 1px solid var(--nav-border);
+  padding: 7px 13px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.education-item:hover .period {
+  background: var(--nav-bg-hover);
+  border-color: var(--nav-border-hover);
+}
+
+.education-item:active .period {
+  transform: translateY(1px);
 }
 
 @media (max-width: 768px) {
@@ -85,6 +104,12 @@
   .course-details {
     font-size: 0.85rem;
   }
+
+  .period {
+    font-size: 0.81rem;
+    padding: 6px 12px;
+    border-radius: 11px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -110,6 +135,8 @@
   }
 
   .period {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    padding: 5px 10px;
+    border-radius: 10px;
   }
 }

@@ -15,7 +15,7 @@
 }
 
 .experience-item {
-  margin-bottom: 36px;
+  margin-bottom: 12px;
   text-align: left;
   padding: 12px;
 }
@@ -24,7 +24,7 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  margin-bottom: 36px;
+  margin-bottom: 12px;
   border-radius: 8px;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -64,11 +64,56 @@
 }
 
 .duration {
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-variant: small-caps;
+  background: var(--nav-bg);
+  color: var(--text);
+  border: 1px solid var(--nav-border);
+  padding: 7px 13px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  pointer-events: none;
 }
 
+.experience-link:hover .duration {
+  background: var(--nav-bg-hover);
+  border-color: var(--nav-border-hover);
+}
+
+.experience-link:active .duration {
+  transform: translateY(1px);
+}
+
+.experience-separator {
+  margin: 12px auto;
+  width: 480px;
+  max-width: 86vw;
+  height: 1.2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(140, 140, 255, 0.08) 12%,
+    rgba(170, 170, 255, 0.28) 38%,
+    rgba(190, 190, 255, 0.45) 50%,
+    rgba(170, 170, 255, 0.28) 62%,
+    rgba(140, 140, 255, 0.08) 88%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.experience-link:hover ~ .experience-separator,
+.experience-separator:hover {
+  opacity: 1;
+  transform: scaleX(1.04);
+}
 @media (max-width: 768px) {
   .resume h2 {
     font-size: 2.5rem;
@@ -92,6 +137,17 @@
   .job-description {
     font-size: 0.9rem;
   }
+
+  .duration {
+    font-size: 0.75rem;
+    padding: 6px 11px;
+    border-radius: 10px;
+  }
+
+  .experience-separator {
+    margin: 8px auto;
+    width: 420px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -113,6 +169,11 @@
   }
 
   .duration {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .experience-separator {
+    width: 340px;
   }
 }
