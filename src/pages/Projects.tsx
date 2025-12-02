@@ -15,6 +15,9 @@ const Projects: React.FC = () => {
       descriptionHtml: content.projectOneDescription,
       githubUrl: null as string | null,
       detailsPath: "/portfolio/lecturers-report-system",
+      isOngoing: false,
+      googlePlayUrl: null as string | null,
+      appStoreUrl: null as string | null,
     },
     {
       id: 2,
@@ -22,6 +25,19 @@ const Projects: React.FC = () => {
       descriptionHtml: content.projectTwoDescription,
       githubUrl: "https://github.com/yinndlovu/pinky-promises",
       detailsPath: "/portfolio/pinky-promises",
+      isOngoing: false,
+      googlePlayUrl: null as string | null,
+      appStoreUrl: null as string | null,
+    },
+    {
+      id: 3,
+      title: "LFC Mobile App",
+      descriptionHtml: "",
+      githubUrl: null as string | null,
+      detailsPath: null as string | null,
+      isOngoing: true,
+      googlePlayUrl: null as string | null,
+      appStoreUrl: null as string | null,
     },
   ];
 
@@ -32,14 +48,19 @@ const Projects: React.FC = () => {
       <div className="projects-list">
         {projects.map((p, idx) => (
           <div key={p.id} className="project-card">
+            {p.isOngoing && (
+              <div className="ongoing-badge">Ongoing</div>
+            )}
             <div className="project-left">
               <h3 className="project-title">
                 {idx + 1}. {p.title}
               </h3>
-              <div
-                className="project-desc"
-                dangerouslySetInnerHTML={{ __html: p.descriptionHtml }}
-              />
+              {p.descriptionHtml && (
+                <div
+                  className="project-desc"
+                  dangerouslySetInnerHTML={{ __html: p.descriptionHtml }}
+                />
+              )}
             </div>
 
             <div className="project-right">
@@ -65,14 +86,65 @@ const Projects: React.FC = () => {
                 )}
               </div>
 
+              <div className="project-actions-middle">
+                {p.googlePlayUrl ? (
+                  <a
+                    href={p.googlePlayUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-store"
+                    title="Download on Google Play"
+                  >
+                    Google Play
+                  </a>
+                ) : (
+                  <span
+                    className="btn btn-store disabled"
+                    aria-disabled="true"
+                    title="Not available on Google Play"
+                  >
+                    Google Play
+                  </span>
+                )}
+                {p.appStoreUrl ? (
+                  <a
+                    href={p.appStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-store"
+                    title="Download on App Store"
+                  >
+                    App Store
+                  </a>
+                ) : (
+                  <span
+                    className="btn btn-store disabled"
+                    aria-disabled="true"
+                    title="Not available on App Store"
+                  >
+                    App Store
+                  </span>
+                )}
+              </div>
+
               <div className="project-actions-bottom">
-                <Link
-                  to={p.detailsPath}
-                  className="btn btn-details"
-                  title="View project details"
-                >
-                  Details
-                </Link>
+                {p.detailsPath ? (
+                  <Link
+                    to={p.detailsPath}
+                    className="btn btn-details"
+                    title="View project details"
+                  >
+                    Details
+                  </Link>
+                ) : (
+                  <span
+                    className="btn btn-details disabled"
+                    aria-disabled="true"
+                    title="Details unavailable"
+                  >
+                    Details
+                  </span>
+                )}
               </div>
             </div>
           </div>

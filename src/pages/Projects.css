@@ -29,6 +29,7 @@
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.02);
+  position: relative;
 }
 
 .project-left .project-title {
@@ -53,6 +54,7 @@
 }
 
 .project-actions-top,
+.project-actions-middle,
 .project-actions-bottom {
   display: flex;
   gap: 10px;
@@ -94,6 +96,51 @@
 .btn-details:hover {
   background-color: rgb(100, 129, 100);
   color: rgb(212, 212, 212);
+}
+
+.btn-details.disabled {
+  background-color: rgba(143, 188, 143, 0.3);
+  color: rgba(240, 255, 255, 0.5);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-store {
+  background-color: #4285f4;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+}
+
+.btn-store:hover {
+  background-color: #357ae8;
+  color: #e6e6e6;
+}
+
+.btn-store.disabled {
+  background-color: rgba(66, 133, 244, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ongoing-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  z-index: 1;
 }
 
 .message {
@@ -159,6 +206,19 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     min-width: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .project-actions-middle {
+    flex-wrap: wrap;
+  }
+
+  .ongoing-badge {
+    top: 8px;
+    right: 8px;
+    font-size: 0.7rem;
+    padding: 3px 8px;
   }
 
   .project-desc {
@@ -208,6 +268,18 @@ a:hover {
 
   .message {
     font-size: 11px;
+  }
+
+  .btn-store {
+    font-size: 0.85rem;
+    padding: 7px 10px;
+  }
+
+  .ongoing-badge {
+    top: 6px;
+    right: 6px;
+    font-size: 0.65rem;
+    padding: 2px 6px;
   }
 }
 
