@@ -11,6 +11,23 @@ const Resume: React.FC = () => {
       <h2>Experience</h2>
       <a
         className="experience-link"
+        href="https://www.altron.com/customer-success-stories/netstar-and-blink-logic"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open ICEP website"
+      >
+        <div className="experience-item">
+          <div className="experience-header">
+            <h3 className="company-name glow-text">Blink Logic</h3>
+            <span className="duration">Nov 2025 - Present</span>
+          </div>
+          <div className="job-title">Software Engineer Intern</div>
+          <div className="job-description"></div>
+        </div>
+      </a>
+      <div className="experience-separator"></div>
+      <a
+        className="experience-link"
         href="https://icep.co.za/"
         target="_blank"
         rel="noopener noreferrer"
@@ -28,23 +45,6 @@ const Resume: React.FC = () => {
             reports. Developed the backend using .NET and SQL Server, and was
             also responsible for deploying & monitoring the backend.
           </div>
-        </div>
-      </a>
-      <div className="experience-separator"></div>
-      <a
-        className="experience-link"
-        href="https://www.altron.com/customer-success-stories/netstar-and-blink-logic"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open ICEP website"
-      >
-        <div className="experience-item">
-          <div className="experience-header">
-            <h3 className="company-name glow-text">Blink Logic</h3>
-            <span className="duration">Nov 2025 - Present</span>
-          </div>
-          <div className="job-title">Software Engineer Intern</div>
-          <div className="job-description"></div>
         </div>
       </a>
     </div>

@@ -68,7 +68,6 @@
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
   font-variant: small-caps;
   background: var(--nav-bg);
   color: var(--text);
