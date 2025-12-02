@@ -3,6 +3,7 @@ import "./Projects.css";
 import content from "../data/content";
 import { Link } from "react-router-dom";
 import { SiGoogleplay, SiAppstore } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 
 const Projects: React.FC = () => {
   useEffect(() => {
@@ -66,31 +67,28 @@ const Projects: React.FC = () => {
             </div>
 
             <div className="project-right">
-              <div className="project-actions-top">
+              <div className="project-actions-icons">
                 {p.githubUrl ? (
                   <a
                     href={p.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-github"
+                    className="btn-icon btn-github"
                     title="Open GitHub repository"
                   >
-                    GitHub
+                    <FaGithub />
                   </a>
                 ) : (
                   <span
-                    className="btn btn-github disabled"
+                    className="btn-icon btn-github disabled"
                     aria-disabled="true"
                     title="Private repository"
                   >
-                    GitHub
+                    <FaGithub />
                   </span>
                 )}
-              </div>
-
-              <div className="project-actions-bottom">
                 {p.isMobileApp && (
-                  <div className="store-buttons">
+                  <>
                     {p.googlePlayUrl ? (
                       <a
                         href={p.googlePlayUrl}
@@ -129,9 +127,11 @@ const Projects: React.FC = () => {
                         <SiAppstore />
                       </span>
                     )}
-                  </div>
+                  </>
                 )}
+              </div>
 
+              <div className="project-actions-details">
                 {p.detailsPath ? (
                   <Link
                     to={p.detailsPath}
