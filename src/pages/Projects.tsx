@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Projects.css";
 import content from "../data/content";
 import { Link } from "react-router-dom";
+import { SiGoogleplay, SiAppstore } from "react-icons/si";
 
 const Projects: React.FC = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const Projects: React.FC = () => {
       githubUrl: null as string | null,
       detailsPath: "/portfolio/lecturers-report-system",
       isOngoing: false,
+      isMobileApp: false,
       googlePlayUrl: null as string | null,
       appStoreUrl: null as string | null,
     },
@@ -26,16 +28,18 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/yinndlovu/pinky-promises",
       detailsPath: "/portfolio/pinky-promises",
       isOngoing: false,
+      isMobileApp: false,
       googlePlayUrl: null as string | null,
       appStoreUrl: null as string | null,
     },
     {
       id: 3,
       title: "LFC Mobile App",
-      descriptionHtml: "",
-      githubUrl: null as string | null,
+      descriptionHtml: "Exciting project... In the works.",
+      githubUrl: "https://github.com/yinndlovu/project-red",
       detailsPath: null as string | null,
       isOngoing: true,
+      isMobileApp: true,
       googlePlayUrl: null as string | null,
       appStoreUrl: null as string | null,
     },
@@ -48,10 +52,8 @@ const Projects: React.FC = () => {
       <div className="projects-list">
         {projects.map((p, idx) => (
           <div key={p.id} className="project-card">
-            {p.isOngoing && (
-              <div className="ongoing-badge">Ongoing</div>
-            )}
             <div className="project-left">
+              {p.isOngoing && <div className="ongoing-badge">Ongoing</div>}
               <h3 className="project-title">
                 {idx + 1}. {p.title}
               </h3>
@@ -79,55 +81,57 @@ const Projects: React.FC = () => {
                   <span
                     className="btn btn-github disabled"
                     aria-disabled="true"
-                    title="Repository unavailable"
+                    title="Private repository"
                   >
                     GitHub
                   </span>
                 )}
               </div>
 
-              <div className="project-actions-middle">
-                {p.googlePlayUrl ? (
-                  <a
-                    href={p.googlePlayUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-store"
-                    title="Download on Google Play"
-                  >
-                    Google Play
-                  </a>
-                ) : (
-                  <span
-                    className="btn btn-store disabled"
-                    aria-disabled="true"
-                    title="Not available on Google Play"
-                  >
-                    Google Play
-                  </span>
-                )}
-                {p.appStoreUrl ? (
-                  <a
-                    href={p.appStoreUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-store"
-                    title="Download on App Store"
-                  >
-                    App Store
-                  </a>
-                ) : (
-                  <span
-                    className="btn btn-store disabled"
-                    aria-disabled="true"
-                    title="Not available on App Store"
-                  >
-                    App Store
-                  </span>
-                )}
-              </div>
-
               <div className="project-actions-bottom">
+                {p.isMobileApp && (
+                  <div className="store-buttons">
+                    {p.googlePlayUrl ? (
+                      <a
+                        href={p.googlePlayUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-icon btn-store"
+                        title="Download on Google Play"
+                      >
+                        <SiGoogleplay />
+                      </a>
+                    ) : (
+                      <span
+                        className="btn-icon btn-store disabled"
+                        aria-disabled="true"
+                        title="Coming soon"
+                      >
+                        <SiGoogleplay />
+                      </span>
+                    )}
+                    {p.appStoreUrl ? (
+                      <a
+                        href={p.appStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-icon btn-store"
+                        title="Download on App Store"
+                      >
+                        <SiAppstore />
+                      </a>
+                    ) : (
+                      <span
+                        className="btn-icon btn-store disabled"
+                        aria-disabled="true"
+                        title="Coming soon"
+                      >
+                        <SiAppstore />
+                      </span>
+                    )}
+                  </div>
+                )}
+
                 {p.detailsPath ? (
                   <Link
                     to={p.detailsPath}
@@ -140,7 +144,7 @@ const Projects: React.FC = () => {
                   <span
                     className="btn btn-details disabled"
                     aria-disabled="true"
-                    title="Details unavailable"
+                    title="Coming soon"
                   >
                     Details
                   </span>
