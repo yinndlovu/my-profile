@@ -21,7 +21,7 @@ const Resume: React.FC = () => {
             <h3 className="company-name glow-text">Huawei Technologies</h3>
             <span className="duration">Nov 2025 - Present</span>
           </div>
-          <div className="job-title">Software Engineer Intern</div>
+          <div className="job-title">Systems Engineer Intern</div>
           <div className="job-description"></div>
         </div>
       </a>
