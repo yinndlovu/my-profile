@@ -11,17 +11,17 @@ const Resume: React.FC = () => {
       <h2>Experience</h2>
       <a
         className="experience-link"
-        href="https://www.altron.com/customer-success-stories/netstar-and-blink-logic"
+        href="https://www.huawei.com/en/"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Open ICEP website"
+        aria-label="Open Huawei Website"
       >
         <div className="experience-item">
           <div className="experience-header">
-            <h3 className="company-name glow-text">Blink Logic</h3>
+            <h3 className="company-name glow-text">Huawei Technologies</h3>
             <span className="duration">Nov 2025 - Present</span>
           </div>
-          <div className="job-title">Software Engineer Intern</div>
+          <div className="job-title">Systems Engineer Intern</div>
           <div className="job-description"></div>
         </div>
       </a>
