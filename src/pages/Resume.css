@@ -42,6 +42,20 @@
   margin-bottom: 8px;
 }
 
+.experience-logo-and-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.experience-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
 .company-name {
   font-size: 1.4rem;
   margin: 0;
@@ -53,6 +67,7 @@
   font-weight: 500;
   color: var(--muted);
   margin-bottom: 8px;
+  margin-left: 52px;
 }
 
 .job-description {
@@ -61,6 +76,7 @@
   color: var(--really-muted);
   max-width: 70%;
   font-weight: 500;
+  margin-left: 52px;
 }
 
 .duration {
@@ -141,6 +157,7 @@
     font-size: 0.75rem;
     padding: 6px 11px;
     border-radius: 10px;
+    margin-left: 52px;
   }
 
   .experience-separator {
@@ -170,6 +187,7 @@
   .duration {
     font-size: 0.7rem;
     padding: 5px 10px;
+    margin-left: 52px;
   }
 
   .experience-separator {

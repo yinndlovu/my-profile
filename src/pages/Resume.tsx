@@ -1,7 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Resume.css";
 
+// logos
+import huaweiLogo from "../assets/logos/huawei-logo.png";
+import icepLogoLight from "../assets/logos/icep-logo-white.png";
+import icepLogoDark from "../assets/logos/icep-logo-dark.png";
+
+const getTheme = (): "light" | "dark" => {
+  const attr = document.documentElement.getAttribute("data-theme");
+  return attr === "light" ? "light" : "dark";
+};
+
 const Resume: React.FC = () => {
+  const [theme, setTheme] = useState<"light" | "dark">(getTheme());
+
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.type === "attributes" && m.attributeName === "data-theme") {
+          setTheme(getTheme());
+        }
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const icepLogo = theme === "light" ? icepLogoDark : icepLogoLight;
+
   useEffect(() => {
     document.title = "Experience | Yin";
   }, []);
@@ -18,7 +49,10 @@ const Resume: React.FC = () => {
       >
         <div className="experience-item">
           <div className="experience-header">
-            <h3 className="company-name glow-text">Huawei Technologies</h3>
+            <div className="experience-logo-and-name">
+              <img src={huaweiLogo} alt="Huawei" className="experience-logo" />
+              <h3 className="company-name glow-text">Huawei Technologies</h3>
+            </div>
             <span className="duration">Nov 2025 - Present</span>
           </div>
           <div className="job-title">Systems Engineer Intern</div>
@@ -35,7 +69,10 @@ const Resume: React.FC = () => {
       >
         <div className="experience-item">
           <div className="experience-header">
-            <h3 className="company-name glow-text">ICEP</h3>
+            <div className="experience-logo-and-name">
+              <img src={icepLogo} alt="ICEP" className="experience-logo" />
+              <h3 className="company-name glow-text">ICEP</h3>
+            </div>
             <span className="duration">Mar 2025 - Sept 2025</span>
           </div>
           <div className="job-title">Backend Developer Intern</div>
