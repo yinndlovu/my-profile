@@ -38,9 +38,9 @@ const Resume: React.FC = () => {
             <h3 className="company-name glow-text">ICEP</h3>
             <span className="duration">Mar 2025 - Sept 2025</span>
           </div>
-          <div className="job-title">Back-End Developer Intern</div>
+          <div className="job-title">Backend Developer Intern</div>
           <div className="job-description">
-            Worked as a back-end developer on a team that built a reporting
+            Worked as a backend developer on a team that built a reporting
             system for my former university, allowing lecturers to submit weekly
             reports. Developed the backend using .NET and SQL Server, and was
             also responsible for deploying & monitoring the backend.
