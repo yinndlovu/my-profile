@@ -15,7 +15,7 @@ const content = {
 
   projectOneDescription: `Collaborated with a team at my workplace to build a reporting system 
     for my former university, enabling lecturers to submit weekly reports. 
-    I worked as a back-end developer using .NET and Entity Framework.
+    I worked as a backend developer using .NET and Entity Framework.
     <br></br>
     The project is owned by <a href="https://www.icep.co.za/" target="_blank" rel="noopener noreferrer">ICEP</a>.`,
 };
