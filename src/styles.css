@@ -45,7 +45,7 @@
 }
 
 :root[data-theme="light"] {
-  --bg: #ffffff;
+  --bg: #ececec;
   --bg-brass1: rgba(187, 147, 52, 0.06);
   --bg-brass2: rgba(187, 147, 52, 0.03);
 
@@ -77,23 +77,6 @@ body {
   color: var(--text);
   margin: 0;
   overflow-x: hidden;
-
-  background-image: radial-gradient(
-      900px 700px at 18% 12%,
-      var(--bg-brass1),
-      transparent 65%
-    ),
-    radial-gradient(800px 600px at 82% 25%, var(--bg-brass2), transparent 60%),
-    radial-gradient(
-      1200px 900px at 50% 120%,
-      rgba(187, 147, 52, 0.05),
-      transparent 70%
-    ),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%),
-    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAQAAADZ5+ZQAAAAHUlEQVQImWNgoBpgYGBg+P///38GJgYGBgYGAAAjyQd3Q0oYJQAAAABJRU5ErkJggg==");
-  background-size: auto, auto, auto, auto, 120px 120px;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-  background-blend-mode: soft-light, soft-light, soft-light, multiply, normal;
 }
 
 .tech-stack-explanation {
