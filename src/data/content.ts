@@ -19,7 +19,7 @@ const content = {
     <br></br>
     The project is owned by <a href="https://www.icep.co.za/" target="_blank" rel="noopener noreferrer">ICEP</a>.`,
     
-  projectFourDescription: `I built this with React Native. An offline-first mobile app that I use to track 
+  projectFourDescription: `I am building this with React Native. An offline-first mobile app that I use to track 
     my habits and things that get me productive better. All personal and tailored to me.`,
 };
 
