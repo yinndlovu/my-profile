@@ -3,7 +3,7 @@ import "./Projects.css";
 import content from "../data/content";
 import { Link } from "react-router-dom";
 import { SiGoogleplay, SiAppstore } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 
 const Projects: React.FC = () => {
   useEffect(() => {
@@ -16,6 +16,7 @@ const Projects: React.FC = () => {
       title: "Lecturers Report System",
       descriptionHtml: content.projectOneDescription,
       githubUrl: null as string | null,
+      websiteUrl: "https://www.icep.co.za/" as string | null,
       detailsPath: "/portfolio/lecturers-report-system",
       isOngoing: false,
       isMobileApp: false,
@@ -27,6 +28,7 @@ const Projects: React.FC = () => {
       title: "Pinky Promises",
       descriptionHtml: content.projectTwoDescription,
       githubUrl: "https://github.com/yinndlovu/pinky-promises",
+      websiteUrl: null as string | null,
       detailsPath: "/portfolio/pinky-promises",
       isOngoing: false,
       isMobileApp: false,
@@ -38,6 +40,7 @@ const Projects: React.FC = () => {
       title: "LFC Mobile App",
       descriptionHtml: "Exciting project... In the works.",
       githubUrl: "https://github.com/ENRMTY/project-red",
+      websiteUrl: null as string | null,
       detailsPath: null as string | null,
       isOngoing: true,
       isMobileApp: true,
@@ -46,9 +49,22 @@ const Projects: React.FC = () => {
     },
     {
       id: 4,
-      title: "Tickr",
+      title: "Graphics Studio",
       descriptionHtml: content.projectFourDescription,
+      githubUrl: "https://github.com/ENRMTY/graphics-studio",
+      websiteUrl: "https://graphics-studio.vercel.app/" as string | null,
+      detailsPath: null as string | null,
+      isOngoing: true,
+      isMobileApp: true,
+      googlePlayUrl: null as string | null,
+      appStoreUrl: null as string | null,
+    },
+    {
+      id: 5,
+      title: "Tickr",
+      descriptionHtml: content.projectFiveDescription,
       githubUrl: "https://github.com/yinndlovu/tickr",
+      websiteUrl: null as string | null,
       detailsPath: null as string | null,
       isOngoing: true,
       isMobileApp: true,
@@ -96,6 +112,25 @@ const Projects: React.FC = () => {
                     title="Private repository"
                   >
                     <FaGithub />
+                  </span>
+                )}
+                {p.websiteUrl ? (
+                  <a
+                    href={p.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-icon btn-website"
+                    title="Visit website"
+                  >
+                    <FaGlobe />
+                  </a>
+                ) : (
+                  <span
+                    className="btn-icon btn-website disabled"
+                    aria-disabled="true"
+                    title="Website not available"
+                  >
+                    <FaGlobe />
                   </span>
                 )}
                 {p.isMobileApp && (

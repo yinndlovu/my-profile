@@ -18,8 +18,12 @@ const content = {
     I worked as a backend developer using .NET and Entity Framework.
     <br></br>
     The project is owned by <a href="https://www.icep.co.za/" target="_blank" rel="noopener noreferrer">ICEP</a>.`,
+
+  projectFourDescription: `I built this editing tool for my personal use. I use it to quickly edit images for the 
+    social media page. It's built with React + Vite utilizing Konva for the canvas and image manipulation. 
+    It is a part of "Project Red" - a larger project I am actively developing.`,
     
-  projectFourDescription: `I am building this with React Native. An offline-first mobile app that I use to track 
+  projectFiveDescription: `I am building this with React Native. An offline-first mobile app that I use to track 
     my habits and things that get me productive better. All personal and tailored to me.`,
 };
 
