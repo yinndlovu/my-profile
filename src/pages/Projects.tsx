@@ -114,7 +114,7 @@ const Projects: React.FC = () => {
                     <FaGithub />
                   </span>
                 )}
-                {p.websiteUrl ? (
+                {p.websiteUrl && (
                   <a
                     href={p.websiteUrl}
                     target="_blank"
@@ -124,14 +124,6 @@ const Projects: React.FC = () => {
                   >
                     <FaGlobe />
                   </a>
-                ) : (
-                  <span
-                    className="btn-icon btn-website disabled"
-                    aria-disabled="true"
-                    title="Website not available"
-                  >
-                    <FaGlobe />
-                  </span>
                 )}
                 {p.isMobileApp && (
                   <>
