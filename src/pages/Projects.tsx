@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
       title: "Graphics Studio",
       descriptionHtml: content.projectFourDescription,
       githubUrl: "https://github.com/ENRMTY/graphics-studio",
-      websiteUrl: "https://graphics-studio.vercel.app/" as string | null,
+      websiteUrl: "https://graphics-studio-one.vercel.app/" as string | null,
       detailsPath: null as string | null,
       isOngoing: true,
       isMobileApp: false,
