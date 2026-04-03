@@ -50,11 +50,11 @@ const ProjectFour: React.FC = () => {
       </h3>
       <p>Some screenshots of the UI of this web application</p>
       <div className="project-four-images">
-        <img src={Screenshot} alt="Full time screenshot" />
         <img src={ScreenshotOne} alt="Screenshot 1" />
         <img src={ScreenshotTwo} alt="Screenshot 2" />
         <img src={ScreenshotThree} alt="Screenshot 3" />
         <img src={ScreenshotFour} alt="Screenshot 4" />
+        <img src={Screenshot} alt="Full time screenshot" />
       </div>
       <section className="project-four-section">
         <h4>Idea behind creating the project</h4>
