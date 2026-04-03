@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./ProjectFour.css";
-import ScreenshotOne from "../../assets/project-four/screenshot-1.png";
-import ScreenshotTwo from "../../assets/project-four/screenshot-2.png";
-import ScreenshotThree from "../../assets/project-four/screenshot-3.png";
-import ScreenshotFour from "../../assets/project-four/screenshot-4.png";
+import ScreenshotOne from "../../assets/project-four/Screenshot-1.png";
+import ScreenshotTwo from "../../assets/project-four/Screenshot-2.png";
+import ScreenshotThree from "../../assets/project-four/Screenshot-3.png";
+import ScreenshotFour from "../../assets/project-four/Screenshot-4.png";
 import Screenshot from "../../assets/project-four/full-time.png";
 import content from "../../data/projects/ProjectFourContent";
 import KonvaLogo from "../../assets/logos/konva_js_logo.png";
