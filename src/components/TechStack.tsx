@@ -25,6 +25,7 @@ import vercelWhiteLogo from "../assets/logos/vercel-logo-white.png";
 import googleCloudLogo from "../assets/logos/google-cloud-logo.png";
 import renderLogo from "../assets/logos/render-logo.jpeg";
 import azureLogo from "../assets/logos/azure-logo.png";
+import postgreLogo from "../assets/logos/postgresql_logo.svg.png";
 
 const getTheme = (): "light" | "dark" => {
   const attr = document.documentElement.getAttribute("data-theme");
@@ -64,7 +65,7 @@ const TechStack = () => {
 
   const handleMouseEnter = (
     tech: { name: string; description: string },
-    event: React.MouseEvent
+    event: React.MouseEvent,
   ) => {
     const rect = event.currentTarget.getBoundingClientRect();
     setHoveredTech({
@@ -85,6 +86,13 @@ const TechStack = () => {
       logo: mysqlLogo,
       description:
         "MySQL is a relational database I mainly use to manage structured data for my apps.",
+    },
+    {
+      name: "PostgreSQL",
+      logo: postgreLogo,
+      description:
+        "PostgreSQL is a relational database that has slowly become my favorite and default choice for managing " +
+        "structured data in my apps.",
     },
     {
       name: "SQL Server",
@@ -255,7 +263,7 @@ const TechStack = () => {
           >
             {hoveredTech.description}
           </div>,
-          document.body
+          document.body,
         )}
     </>
   );

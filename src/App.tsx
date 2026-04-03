@@ -10,6 +10,7 @@ import Resume from "./pages/Resume";
 import Education from "./pages/Education";
 import ProjectOne from "./pages/projects-details/ProjectOne";
 import ProjectTwo from "./pages/projects-details/ProjectTwo";
+import ProjectFour from "./pages/projects-details/ProjectFour";
 import GithubProfileCard from "./components/GithubProfileCard";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
@@ -78,6 +79,7 @@ const App = () => {
               element={<ProjectOne />}
             />
             <Route path="/portfolio/pinky-promises" element={<ProjectTwo />} />
+            <Route path="/portfolio/graphics-studio" element={<ProjectFour />} />
             <Route path="/experience" element={<Resume />} />
             <Route path="/education" element={<Education />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
