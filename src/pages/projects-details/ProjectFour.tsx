@@ -8,8 +8,8 @@ import Screenshot from "../../assets/project-four/full-time.png";
 import content from "../../data/projects/ProjectFourContent";
 import KonvaLogo from "../../assets/logos/konva_js_logo.png";
 import ReactLogo from "../../assets/logos/react_logo.png";
-import NetCoreLogo from "../../assets/logos/netcore_logo.svg.png";
 import PostgreLogo from "../../assets/logos/postgresql_logo.svg.png";
+import NodeJsLogo from "../../assets/logos/nodejs_logo.png";
 
 const techStack = [
   {
@@ -24,7 +24,7 @@ const techStack = [
   },
   {
     name: "Node.js with Express",
-    icon: NetCoreLogo,
+    icon: NodeJsLogo,
     usage: "Backend API",
   },
   {
