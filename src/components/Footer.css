@@ -36,7 +36,9 @@
 .social-icon {
   font-size: 26px;
   color: var(--text);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .social-icon:hover {

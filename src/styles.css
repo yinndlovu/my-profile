@@ -71,8 +71,8 @@
 }
 
 body {
-  font-family: "Geist", "Franklin Gothic Medium", "Arial Narrow", Arial,
-    sans-serif;
+  font-family:
+    "Geist", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
@@ -204,7 +204,9 @@ body {
 
 .glow-text {
   color: #fff;
-  text-shadow: 0 0 4px #7e91a5, 0 0 6px #7e91a5;
+  text-shadow:
+    0 0 4px #7e91a5,
+    0 0 6px #7e91a5;
   font-weight: bold;
 }
 
@@ -215,7 +217,10 @@ body {
 
   .glow-text {
     color: #fff;
-    text-shadow: 0 0 4px #7e91a5, 0 0 6px #7e91a5, 0 0 8px #7e91a5;
+    text-shadow:
+      0 0 4px #7e91a5,
+      0 0 6px #7e91a5,
+      0 0 8px #7e91a5;
     font-weight: bold;
   }
 
@@ -274,7 +279,10 @@ body {
 
   .glow-text {
     color: #fff;
-    text-shadow: 0 0 4px #7e91a5, 0 0 6px #7e91a5, 0 0 8px #7e91a5;
+    text-shadow:
+      0 0 4px #7e91a5,
+      0 0 6px #7e91a5,
+      0 0 8px #7e91a5;
     font-weight: bold;
   }
 

@@ -11,7 +11,9 @@
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
 }
 
 .popup-overlay.show {
@@ -104,7 +106,9 @@
   padding: 4px;
   border-radius: 50%;
   z-index: 10;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .contact-form-x-button:hover,
