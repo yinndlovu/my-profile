@@ -55,7 +55,7 @@ const Resume: React.FC = () => {
             </div>
             <span className="duration">Nov 2025 - Present</span>
           </div>
-          <div className="job-title">Systems Engineer Intern</div>
+          <div className="job-title">Network Engineer Intern</div>
           <div className="job-description"></div>
         </div>
       </a>
