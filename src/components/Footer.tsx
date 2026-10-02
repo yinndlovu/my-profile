@@ -29,7 +29,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <a href="mailto:starboy@yinn.dev" className="contact-link">
+        <a href="mailto:yin@yinn.dev" className="contact-link">
           yin@yinn.dev
         </a>
       </div>
